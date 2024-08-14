@@ -11,7 +11,9 @@ In addition, the course aims for students to acquire additional competencies in 
 At the end of the course the student will be able to:
 
 **RAC1**. Solve problems by applying object-oriented programming.
+
 **RAC2**. Apply modular programming techniques and code reuse, using libraries and frameworks.
+
 **RAC3**. Develop step-by-step solutions applying debugging techniques and logical reasoning to solve complex programming problems.
 
 ## Grades
