@@ -2,7 +2,12 @@
 
 ---
 
-## Objectivo
+## Lessons
+
+[1. Introduction to Java](./Lessons/1.%20IntroductionToJava.md)
+[2. Fudamentals of OOP](./Lessons/2.%20OOP_Fundamentals_Plantilla.ipynb)
+
+## Objective
 
 To train students in problem solving through object-oriented programming (OOP). Throughout the course, students will learn to apply advanced modular programming techniques, to reuse code through libraries and frameworks, and to develop complex solutions through debugging and logical reasoning processes.
 
@@ -48,7 +53,7 @@ At the end of the course the student will be able to:
 
 For all periods the grade is divided into: Co-evaluation (10 %), self-evaluation (10 %), and teacher evaluation (80 %) which is divided into exams (30 %) and assignments (50 %). The first and second periods are 35 % of the final grade, while for the last period it is 30 %. In the first and second periods the exam consists of two tests: one practical (60 %) and the other theoretical (40 %). 
 
-The project is divide in two grades: first (20 %) and last (80 %) assignment delivery.
+The project is divide in two grades: first report (20 %) and last (80 %) assignment.
 
 **Note:** You can practice and complement the course by solving programming problems in any of the following pages:
 
@@ -56,15 +61,39 @@ The project is divide in two grades: first (20 %) and last (80 %) assignment del
 - [Hackerrank](https://www.hackerrank.com/)
 - [LeetCode](https://leetcode.com/)
 
-Each problem solved, that pass all the test created for the page, can be change by points. Very simple problems are not valid.
+Each solved problem, which has passed all the tests created for the page, can be exchanged for points. Very simple problems are not valid.
 
 ## Assigments
 
 All assignments will be stored on [GitHub](https://github.com/) but will be uploaded for grading on [Campus Virtual](https://campusvirtualpes.etitc.edu.co/Edusuperior/). 
 
+## Project Ideas
+
+- How to analyze and visualize [birdsongs](https://github.com/animalsongs/birds) on Java 
+- Intelligent chatbot/agent
+- ETITC Parking (bykes, cars, and motorbikes)
+- ETITC Restaurant
+- ETITC workers attendence
+
 ## References:
 
--
--
+### Books
+
+
+- Y. Daniel Liang. *"Introduction to Java Programming and Data Structures, Comprehensive Version"*. Addison Wesley. Edición 12 (2019). Capítulo 1 y 9.
+- Koffman, Elliot B.; Wolfgang, Paul A. T."*Data structures : abstraction and design using Java"*. Wiley. Tercera edición (2016). Capítulo 2.5, página 101.
+- James T. Streib,Takako Soma. *"Guide to Data Structures: A Concise Introduction Using Java"*. Springer International Publishing. Primera edición (2017). Capítulo 5, página 120.
+
+### Guides and Tutorials
+
+- [Guía oficial de Oracle sobre Programación Orientada a Objetos en Java](https://docs.oracle.com/javase/tutorial/java/concepts/index.html)
+- [Tutorial sobre POO en Java de GeeksforGeeks](https://www.geeksforgeeks.org/object-oriented-programming-oops-concept-in-java/)
+
+### Repositories
+
+- [Java Tutorial for Beginners ](https://www.youtube.com/watch?v=eIrMbAQSU34)
+- [Learn Java in One Video - 15-minute Crash Course ](https://www.youtube.com/watch?v=drQK8ciCAjY)
+- [Java Roadmap for 2024 ](https://www.youtube.com/watch?v=fO9HN3nvDLI)
+- [Java Tutorial for Beginners 2023 ](https://www.youtube.com/watch?v=BGTx91t8q50)
 
 You can find all reference in the Google Drive folder [References](https://itceduco-my.sharepoint.com/:f:/g/personal/saguileran_itc_edu_co/Eledh23Sd41CnWAnmM3jALkBNHxwDXfiZ4CcmnRTa_ST3Q?e=Z1qPlS).
