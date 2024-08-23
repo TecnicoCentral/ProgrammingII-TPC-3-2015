@@ -68,13 +68,40 @@ Each solved problem, which has passed all the tests created for the page, can be
 
 All assignments will be stored on [GitHub](https://github.com/) but will be uploaded for grading on [Campus Virtual](https://campusvirtualpes.etitc.edu.co/Edusuperior/). 
 
-## Project Ideas
+## Projects
 
-- How to analyze and visualize [birdsongs](https://github.com/animalsongs/birds) on Java 
+- How to analyze and visualize [birdsongs](https://github.com/animalsongs/birds) on Java. 
+  - Jose Mateus
+  - Miguel Lara
+  - Manuel Castillo
+  - Lenin Cruz
 - Intelligent chatbot/agent
 - ETITC Parking (bykes, cars, and motorbikes)
+  - Cristian Camilo Espinosa
+  - Diego Fernando Báez
+  - Juan Esteban Joven
+  - Michael Pinzón
 - ETITC Restaurant
 - ETITC workers attendence
+  - Danna Sofía Rojas Flórez 
+  - Diana Lorena Salinas Ortegón
+  - Juan Diego 
+
+
+otros 1
+
+- Johan Alexis Hernandez Sanchez
+- Edwin Leonardo Bautista Gil
+- Sara Milena Villacorte Pedraza
+- Brayan Stiven Sandoval Reyes
+
+
+otros
+
+- Carlos Sotelo 
+- Andres Molina
+- Edison Rincon
+- Juan David Nejarano 
 
 ## References:
 
