@@ -6,7 +6,11 @@
 
 [1. Introduction to Java](./Lessons/1.%20IntroductionToJava.md)
 
-[2. Fudamentals of OOP](./Lessons/2.%20OOP_Fundamentals_Plantilla.ipynb)
+[2. Fudamentals of OOP](./Lessons/2.%20OOP_Fundamentals_I.ipynb)
+
+[3. Fudamentals of OOP II](./Lessons/3.%20OOP_Fundamentals_II.ipynb)
+
+[4. UML](./Lessons/4.%20UML.md)
 
 ## Objective
 
@@ -56,13 +60,14 @@ For all periods the grade is divided into: Co-evaluation (10 %), self-evaluation
 
 The project is divide in two grades: first report (20 %) and last (80 %) assignment.
 
-**Note:** You can practice and complement the course by solving programming problems in any of the following pages:
-
-- [Codeabbey](https://www.codeabbey.com/)
-- [Hackerrank](https://www.hackerrank.com/)
-- [LeetCode](https://leetcode.com/)
-
-Each solved problem, which has passed all the tests created for the page, can be exchanged for points. Very simple problems are not valid.
+>[!NOTE]
+>You can practice and complement the course by solving programming problems in any of the following pages:
+>
+>- [Codeabbey](https://www.codeabbey.com/)
+>- [Hackerrank](https://www.hackerrank.com/)
+>- [LeetCode](https://leetcode.com/)
+>
+>Each solved problem, which has passed all the tests created for the page, can be exchanged for points. Very simple problems are not valid.
 
 ## Assigments
 
@@ -76,32 +81,28 @@ All assignments will be stored on [GitHub](https://github.com/) but will be uplo
   - Manuel Castillo
   - Lenin Cruz
 - Intelligent chatbot/agent
+  - Carlos Sotelo 
+  - Andres Molina
+  - Edison Rincon
+  - Juan David Nejarano 
 - ETITC Parking (bykes, cars, and motorbikes)
   - Cristian Camilo Espinosa
   - Diego Fernando Báez
   - Juan Esteban Joven
   - Michael Pinzón
 - ETITC Restaurant
+  - Johan Alexis Hernandez Sanchez
+  - Edwin Leonardo Bautista Gil
+  - Sara Milena Villacorte Pedraza
+  - Brayan Stiven Sandoval Reyes
+
 - ETITC workers attendence
   - Danna Sofía Rojas Flórez 
   - Diana Lorena Salinas Ortegón
   - Juan Diego 
 
 
-otros 1
 
-- Johan Alexis Hernandez Sanchez
-- Edwin Leonardo Bautista Gil
-- Sara Milena Villacorte Pedraza
-- Brayan Stiven Sandoval Reyes
-
-
-otros
-
-- Carlos Sotelo 
-- Andres Molina
-- Edison Rincon
-- Juan David Nejarano 
 
 ## References:
 
@@ -123,5 +124,9 @@ otros
 - [Learn Java in One Video - 15-minute Crash Course ](https://www.youtube.com/watch?v=drQK8ciCAjY)
 - [Java Roadmap for 2024 ](https://www.youtube.com/watch?v=fO9HN3nvDLI)
 - [Java Tutorial for Beginners 2023 ](https://www.youtube.com/watch?v=BGTx91t8q50)
+
+### Codes
+
+- [Introduction to Java Programming and Data Structures, Comprehensive Version, 12th Edition](https://media.pearsoncmg.com/ph/esm/ecs_liang_ijp_12/cw/content/source-code.php)
 
 You can find all reference in the Google Drive folder [References](https://itceduco-my.sharepoint.com/:f:/g/personal/saguileran_itc_edu_co/Eledh23Sd41CnWAnmM3jALkBNHxwDXfiZ4CcmnRTa_ST3Q?e=Z1qPlS).
