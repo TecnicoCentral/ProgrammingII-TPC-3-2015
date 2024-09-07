@@ -4,6 +4,8 @@
 
 ## Lessons
 
+[Project Guide Lines](./Lessons/ProjectGuideLines.md)
+
 [1. Introduction to Java](./Lessons/1.%20IntroductionToJava.md)
 
 [2. Fudamentals of OOP](./Lessons/2.%20OOP_Fundamentals_I.ipynb)
