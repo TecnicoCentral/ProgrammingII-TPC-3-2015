@@ -4,7 +4,7 @@
 
 ## Lessons
 
-[Project Guide Lines](./Lessons/ProjectGuideLines.md)
+[Project Guidelines](./Lessons/ProjectGuideLines.md)
 
 [1. Introduction to Java](./Lessons/1.%20IntroductionToJava.md)
 
@@ -77,39 +77,38 @@ All assignments will be stored on [GitHub](https://github.com/) but will be uplo
 
 ## Projects
 
-- How to analyze and visualize [birdsongs](https://github.com/animalsongs/birds) on Java. 
+- [How to analyze and visualize birdsongs on Java](https://github.com/mrcastillor/Cantos_de_aves)
   - Jose Mateus
   - Miguel Lara
   - Manuel Castillo
   - Lenin Cruz
-- Intelligent chatbot/agent
+  
+- [Intelligent chatbot/agent](https://github.com/AndresMolin4/ChatBot)
   - Carlos Sotelo 
   - Andres Molina
   - Edison Rincon
   - Juan David Nejarano 
-- ETITC Parking (bykes, cars, and motorbikes)
+  
+- [ETITC Parking (bykes, cars, and motorbikes)](https://github.com/Estebaniza/PROYECTO-PROGRAMACION-2)
   - Cristian Camilo Espinosa
   - Diego Fernando Báez
   - Juan Esteban Joven
   - Michael Pinzón
+  
 - ETITC Restaurant
   - Johan Alexis Hernandez Sanchez
   - Edwin Leonardo Bautista Gil
   - Sara Milena Villacorte Pedraza
   - Brayan Stiven Sandoval Reyes
 
-- ETITC workers attendence
+- [ETITC workers attendence](https://github.com/Lorena0127/AsistenciaDeTrabajadores)
   - Danna Sofía Rojas Flórez 
   - Diana Lorena Salinas Ortegón
   - Juan Diego 
 
-
-
-
 ## References:
 
 ### Books
-
 
 - Y. Daniel Liang. *"Introduction to Java Programming and Data Structures, Comprehensive Version"*. Addison Wesley. Edición 12 (2019). Capítulo 1 y 9.
 - Koffman, Elliot B.; Wolfgang, Paul A. T."*Data structures : abstraction and design using Java"*. Wiley. Tercera edición (2016). Capítulo 2.5, página 101.

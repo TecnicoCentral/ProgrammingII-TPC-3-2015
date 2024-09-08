@@ -3,7 +3,6 @@
 ---
 
 <!-- @import "[TOC]" {cmd="toc" depthFrom=1 depthTo=6 orderedList=false} -->
-
 <!-- code_chunk_output -->
 
 - [Guía para la Realización del Proyecto](#guía-para-la-realización-del-proyecto)
@@ -19,7 +18,6 @@
   - [10. Recomendaciones](#10-recomendaciones)
 
 <!-- /code_chunk_output -->
-
 
 ---
 
