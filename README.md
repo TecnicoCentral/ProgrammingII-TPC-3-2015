@@ -14,6 +14,8 @@
 
 [4. UML](./Lessons/4.%20UML.md)
 
+[5 Design Patterns](./Lessons/5.%20DesignPatterns.md)
+
 ## Objective
 
 To train students in problem solving through object-oriented programming (OOP). Throughout the course, students will learn to apply advanced modular programming techniques, to reuse code through libraries and frameworks, and to develop complex solutions through debugging and logical reasoning processes.
