@@ -89,7 +89,7 @@ All assignments will be stored on [GitHub](https://github.com/) but will be uplo
   - Carlos Sotelo 
   - Andres Molina
   - Edison Rincon
-  - Juan David Nejarano 
+  - Juan David Bejarano 
   
 - [ETITC Parking (bykes, cars, and motorbikes)](https://github.com/Estebaniza/PROYECTO-PROGRAMACION-2)
   - Cristian Camilo Espinosa
