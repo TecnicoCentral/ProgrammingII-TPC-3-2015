@@ -16,13 +16,17 @@
 
 [5 Design Patterns](./Lessons/5.%20DesignPatterns.md)
 
+## Exams
+
+First Exam: [v1](./Lessons/Exams/First/ExamV1.ipynb) and [v2](./Lessons/Exams/First/ExamV2.ipynb)
+
 ## Objective
 
 To train students in problem solving through object-oriented programming (OOP). Throughout the course, students will learn to apply advanced modular programming techniques, to reuse code through libraries and frameworks, and to develop complex solutions through debugging and logical reasoning processes.
 
 In addition, the course aims for students to acquire additional competencies in key areas such as developing applications with graphical user interfaces using JavaFX, implementing recognized design patterns such as Factory and MVC, and managing persistence and database connection in their applications. These skills will enable students to create robust and efficient software, aligned with the needs of the work environment.
 
-#### Subject Learning Results (RAC)
+## Subject Learning Results (RAC)
 
 At the end of the course the student will be able to:
 
