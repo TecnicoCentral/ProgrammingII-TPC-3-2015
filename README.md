@@ -16,6 +16,8 @@
 
 [5 Design Patterns](./Lessons/5.%20DesignPatterns.md)
 
+[6. APIs](./Lessons/6.%20API.md)
+
 ## Exams
 
 First Exam: [v1](./Lessons/Exams/First/ExamV1.ipynb) and [v2](./Lessons/Exams/First/ExamV2.ipynb)
