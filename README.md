@@ -18,6 +18,8 @@
 
 [6. APIs](./Lessons/6.%20API.md)
 
+[7. Serializable](./Lessons/7.%20Serializable.ipynb)
+
 ## Exams
 
 First Exam: [v1](./Lessons/Exams/First/ExamV1.ipynb) and [v2](./Lessons/Exams/First/ExamV2.ipynb)
@@ -103,7 +105,7 @@ All assignments will be stored on [GitHub](https://github.com/) but will be uplo
   - Juan Esteban Joven
   - Michael Pinzón
   
-- ETITC Restaurant
+- [ETITC Restaurant](https://github.com/Edwin-Bautista-Gil/ETITC.Restaurant/)
   - Johan Alexis Hernandez Sanchez
   - Edwin Leonardo Bautista Gil
   - Sara Milena Villacorte Pedraza
