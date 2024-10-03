@@ -18,7 +18,7 @@
 
 [6. APIs](./Lessons/6.%20API.md)
 
-[7. Serializable](./Lessons/7.%20Serializable.ipynb)
+[7. Files Manage and Serialization](./Lessons/7.%20Serializable.ipynb)
 
 ## Exams
 
