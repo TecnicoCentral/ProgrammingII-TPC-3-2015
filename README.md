@@ -20,6 +20,8 @@
 
 [7. Files Manage and Serialization](./Lessons/7.%20Serializable.ipynb)
 
+[8. DataBases in Java](./Lessons/8.%20DataBases.md)
+
 ## Exams
 
 First Exam: [v1](./Lessons/Exams/First/ExamV1.ipynb) and [v2](./Lessons/Exams/First/ExamV2.ipynb)
