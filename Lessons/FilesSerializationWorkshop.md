@@ -44,32 +44,71 @@ Esta clase contendrá todos los elementos que conforman la página web, y gestio
 
 - **Atributos**:
   - `titulo`: Título de la página.
-  - `html_nombre` y `css_nombre`: Nombre de los archivos html y css, definan los valores con los nombre más utiulizados: `index.html` y `styles.css`.
+  - `html_nombre` y `css_nombre`: Nombre de los archivos html y css, definan los valores con los nombre más utilizados: `index.html` y `styles.css`.
   - `componentes`: Lista de componentes de la página (títulos, subtítulos, párrafos, tablas, imágenes, etc.).
   - `estilos`: Estilos (colores, fuentes, tamaño de texto) para aplicar en el CSS.
-  - `plantilla`: Plantailla del documento:
+  - `plantilla`: Plantilla del documento:
   
     ```html
     <!DOCTYPE html>
-        <html lang="es">
-        <head>
-            <meta charset="UTF-8">
-            <title>Título de la página</title>
-            <link rel="stylesheet" type="text/css" href="nombre_styles.css">
-        </head>
-        <body>
-            {Aqui va todo el código que van a crear}: %s
-        </body>
-        </html>
+    <html lang="es">
+    <head>
+        <meta charset="UTF-8">
+        <title>Título de la página</title>
+        <link rel="stylesheet" type="text/css" href="styles.css">
+    </head>
+    <body>
+    ```
+    Desde aca le empiezan a sumar cosas a esta string, eso lo hará el método `generarHTM()`.
+  - `plantilla_final`: Plantilla final del documento:
+  
+    ```html
+    </body>
+    </html>
     ```
 
-    Es altamente sugerido que en vez de sumar cadenas utilicen mejores estrategias y métodos para insertar texto, como por ejemplo el método `formatted()` o `String.format()`.
+  Es altamente sugerido que en vez de sumar cadenas utilicen mejores estrategias y métodos para insertar texto, como por ejemplo el método `formatted()` o `String.format()`. Para estos casos, donde tenemos una string de muchas líneas, una buena opción es utilizar la triple comilla:
+
+  ```java
+  String css_str = """
+  /* Estilos globales */
+  body {
+      font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+      margin: 0;
+      padding: 0;
+      background-color: #f0f0f5;
+      color: #333;
+      line-height: 1.6;
+  }
+  """;
+  ```
+
+  Sin embargo, las funciones de formatted o format no funcionan, pero se puede solucionar con el siguiente truco:
+
+  ```java
+  String margin = "0";
+  String padding = "0";
+  String css_str = """
+  /* Estilos globales */
+  body {
+      font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+      margin: """+margin+"""
+      ;
+      padding: """+padding+"""
+      ;
+      background-color: #f0f0f5;
+      color: #333;
+      line-height: 1.6;
+  }
+  """;
+  ```
+  Donde se definieron los atributos `margin` y `padding` en variables externas y despues solo se concatenan, **cuidado porque el ; debe ir en otra línea para no generar error**. <br> <br>
   
 - **Métodos**:
   - **Constructor**: Recibe el `titulo` y nombre de los archivos html y css como parámetros obligatorios.
   - `agregarComponente(ComponenteWeb componente)`: Método para añadir un componente a la lista de la página.
-  - `generarHTML()`: Método para generar el archivo HTML, iterando sobre los componentes.
-  - `generarCSS()`: Método para generar el archivo CSS, basándose en los estilos definidos.
+  - `generarHTML()`: Método para generar el archivo HTML, iterando sobre los componentes. Es un método que no pide nada y escribe un archivo.
+  - `generarCSS()`: Método para generar el archivo CSS, basándose en los estilos definidos. Es un método que no pide nada y escribe un archivo.
 
 ### Clase `ComponenteWeb` (abstracta)  
 Esta clase abstracta será la base para todos los componentes HTML.
@@ -95,6 +134,11 @@ Esta clase representará un título HTML (`<h1>`).
   -  **Constructor**: Recibe `texto` y `nivel` como parámetros obligatorios.
   - `generarCodigoHTML()`: Genera el código HTML para un título de acuerdo al nivel especificado.
 
+- **Ejemplo**:
+  ```html
+   <h1>This is heading 1</h1>
+   ```
+
 ### Clase `Parrafo` (hereda de `ComponenteWeb`)
 Esta clase representará un párrafo (`<p>`).
 
@@ -104,6 +148,11 @@ Esta clase representará un párrafo (`<p>`).
 - **Métodos**:
   - **Constructor**: Recibe `texto` como parámetro obligatorio.
   - `generarCodigoHTML()`: Genera el código HTML para un párrafo.
+
+- **Ejemplo**:
+  ```html
+   <p>Párrafo con texto</p>
+   ```
 
 ### Clase `Imagen` (hereda de `ComponenteWeb`)
 Esta clase representará una imagen (`<img>`).
@@ -116,6 +165,11 @@ Esta clase representará una imagen (`<img>`).
   - **Constructor**: Recibe `ruta` y `texto` como parámetros obligatorios.
   - `generarCodigoHTML()`: Genera el código HTML para una imagen.
 
+- **Ejemplo**:
+  ```html
+     <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSkHkwOfU9ISltfS7mk7ooj3SS80Ac_mCnkAw&s" alt="Italian Trulli">
+   ```
+
 ### Clase `Tabla` (hereda de `ComponenteWeb`) 
 Esta clase representará una tabla (`<table>`).
 
@@ -126,6 +180,30 @@ Esta clase representará una tabla (`<table>`).
   - **Constructor**: Recibe `datos` como parámetro obligatorio.
   - `generarCodigoHTML()`: Genera el código HTML para una tabla completa.
 
+- **Ejemplo**:
+  
+```html
+  <table>
+  <tr>
+    <th>Company</th>
+    <th>Contact</th>
+    <th>Country</th>
+  </tr>
+  <tr>
+    <td>Alfreds Futterkiste</td>
+    <td>Maria Anders</td>
+    <td>Germany</td>
+  </tr>
+  <tr>
+    <td>Centro comercial Moctezuma</td>
+    <td>Francisco Chang</td>
+    <td>Mexico</td>
+  </tr>
+</table> 
+```
+
+>[!NOTE]
+>La etiqueta ```<th>``` se refiere a los encabezado, aunque no obligatoria tenerla. La tabla también funciona si tiene solo etiquetas ```<td>```.
 
 ### Clase: `Enlace` (hereda de `ComponenteWeb`)
 
