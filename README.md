@@ -22,6 +22,8 @@
 
 [8. DataBases in Java](./Lessons/8.%20DataBases.md)
 
+[9. DB Workshop](./Lessons/9.%20DB-Workshop.md)
+
 ## Exams
 
 First Exam: [v1](./Lessons/Exams/First/ExamV1.ipynb) and [v2](./Lessons/Exams/First/ExamV2.ipynb)
