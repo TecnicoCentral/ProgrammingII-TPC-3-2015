@@ -26,7 +26,7 @@
 
 ## Exams
 
-First Exam: [v1](./Lessons/Exams/First/ExamV1.ipynb) and [v2](./Lessons/Exams/First/ExamV2.ipynb)
+First Exam: [v1](./Lessons/Exams/First/FirstExamV1.ipynb) and [v2](./Lessons/Exams/First/FirstExamV2.ipynb)
 
 ## Objective
 
