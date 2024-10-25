@@ -26,7 +26,13 @@
 
 ## Exams
 
-First Exam: [v1](./Lessons/Exams/First/FirstExamV1.ipynb) and [v2](./Lessons/Exams/First/FirstExamV2.ipynb)
+First: 
+- [v1](./Lessons/Exams/FirstExamV1.ipynb)
+- [v2](./Lessons/Exams/FirstExamV2.ipynb)
+
+Second: 
+  - [v1](./Lessons/Exams/SecondV1.md) - [Solution](./Lessons/Exams/v1/src/main/java/secondv1/Main.java)
+  - [v2](./Lessons/Exams/SecondV2.md) - [Solution](./Lessons/Exams/v2/src/main/java/secondv2/Main.java)
 
 ## Objective
 
