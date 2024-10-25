@@ -53,19 +53,19 @@ A continuación se describen los pasos detallados que debes seguir:
      - **Fecha de la grabación** (opcional)
      - Otros datos que consideres relevantes.
     
-    La estructura de la tabla a crear es la siguiente:
+      <br>La estructura de la tabla a crear es la siguiente:
     
-    ```sql
-    CREATE TABLE nombre_tabla(
-        ID INT PRIMARY KEY,      -- es una línea obligatoria que puede ser el ID del ave o un número nuevo
-        atributo1 VARCHAR(100),  -- si es string
-        atributo2 INT,           -- si es entero
-        atributo3 DOUBLE(10,4),
-        atributo1 VARCHAR(100),  -- si es una fecha
-    );
-    ```
+      ```sql
+      CREATE TABLE nombre_tabla(
+         ID INT PRIMARY KEY,      -- es una línea obligatoria que puede ser el ID del ave o un número nuevo
+         atributo1 VARCHAR(100),  -- si es string
+         atributo2 INT,           -- si es entero
+         atributo3 DOUBLE(10,4),
+         atributo1 VARCHAR(100)  -- si es una fecha
+      );
+      ```
 
-    Cambia los nombres de los atributos por los apropiados y guarda el tipo de dato correcto.
+      Cambia los nombres de los atributos por los apropiados y guarda el tipo de dato correcto.
    
 ### 3. Inserción de Datos en la Tabla
 
