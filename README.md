@@ -27,12 +27,12 @@
 ## Exams
 
 First: 
-- [v1](./Lessons/Exams/FirstExamV1.ipynb)
-- [v2](./Lessons/Exams/FirstExamV2.ipynb)
+- [v1](./Lessons/Exams/First/V1.md) - [Solution](./Lessons/Exams/First/V1.ipynb)
+- [v2](./Lessons/Exams/First/V2.md) - [Solution](./Lessons/Exams/First/V2.ipynb)
 
 Second: 
-  - [v1](./Lessons/Exams/SecondV1.md) - [Solution](./Lessons/Exams/v1/src/main/java/secondv1/Main.java)
-  - [v2](./Lessons/Exams/SecondV2.md) - [Solution](./Lessons/Exams/v2/src/main/java/secondv2/Main.java)
+  - [v1](./Lessons/Exams/Second/SecondV1.md) - [Solution](./Lessons/Exams/Second/v1/src/main/java/secondv1/Main.java)
+  - [v2](./Lessons/Exams/Second/SecondV2.md) - [Solution](./Lessons/Exams/Second/v2/src/main/java/v2/Main.java)
 
 ## Objective
 

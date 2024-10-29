@@ -53,9 +53,9 @@ A continuación, se describen los pasos detallados que debes seguir:
      - **Canal/Plataforma**
      - **Fecha de estreno** (opcional)
      - **URL del Show** (opcional)
-     - Otros datos que consideres relevantes.
+     - Otros datos que consideres relevantes. <br><br>
 
-      <br>La estructura de la tabla a crear es la siguiente:
+      La estructura de la tabla a crear es la siguiente:
     
       ```sql
       CREATE TABLE nombre_tabla(
@@ -63,7 +63,7 @@ A continuación, se describen los pasos detallados que debes seguir:
          atributo1 VARCHAR(100),  -- si es string
          atributo2 INT,           -- si es entero
          atributo3 DOUBLE(10,4),
-         atributo1 VARCHAR(100)  -- si es una fecha
+         atributo1 VARCHAR(100),  -- si es una fecha
       );
       ```
 
