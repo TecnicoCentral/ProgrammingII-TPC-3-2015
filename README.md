@@ -24,13 +24,15 @@
 
 [9. DB Workshop](./Lessons/9.%20DB-Workshop.md)
 
+[10. JavaFX](./Lessons/10.%20JavaFX.md)
+
 ## Exams
 
-First: 
+**First:**
 - [v1](./Lessons/Exams/First/V1.md) - [Solution](./Lessons/Exams/First/V1.ipynb)
 - [v2](./Lessons/Exams/First/V2.md) - [Solution](./Lessons/Exams/First/V2.ipynb)
 
-Second: 
+**Second:** 
   - [v1](./Lessons/Exams/Second/SecondV1.md) - [Solution](./Lessons/Exams/Second/v1/src/main/java/secondv1/Main.java)
   - [v2](./Lessons/Exams/Second/SecondV2.md) - [Solution](./Lessons/Exams/Second/v2/src/main/java/v2/Main.java)
 
