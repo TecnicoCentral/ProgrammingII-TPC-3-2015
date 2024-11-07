@@ -20,6 +20,7 @@
     - [Clase `SerializadorPagina`](#clase-serializadorpagina)
   - [Paso 5: Creación de la página web y manipulación de archivos](#paso-5-creación-de-la-página-web-y-manipulación-de-archivos)
   - [Criterios de Evaluación](#criterios-de-evaluación)
+  - [Solución](#solución)
   - [Referencias](#referencias)
     - [Recursos en línea](#recursos-en-línea)
     - [Libros](#libros)
@@ -269,6 +270,10 @@ Esta clase se encargará de la serialización de los objetos que representan la 
 - Generación correcta de los archivos `index.html` y `styles.css`.
 - Implementación de la serialización y deserialización de los objetos de la página.
 - Calidad de la estructura y estilo de la página generada (aplicación de CSS).
+
+## Solución
+
+La solución de este taller esta en la carpeta [webpage](./Codes/webpage/), para ejecutar el resultado utilizar el archivo [TestPaginaWeb.java](./Codes/webpage/src/main/java/pagina/TestPaginaWeb.java).
 
 ## Referencias
 
