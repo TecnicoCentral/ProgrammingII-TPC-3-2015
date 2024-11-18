@@ -50,7 +50,7 @@ JDBC es una API que permite a las aplicaciones Java interactuar con bases de dat
 
 ## 2. Operaciones CRUD
 
-Para ejecutar los siguiente códigos deben primero agrega la clase [DatabaseConnection](#a-conexión-a-la-base-de-datos).
+Para ejecutar los siguiente códigos deben primero agrega la clase [DatabaseConnection](DatabaseConnection).
 
 ### a) Insertar Registros (`INSERT`)
 
@@ -237,6 +237,7 @@ VALUES ('Aguardiente Antioqueño', 'Aguardiente', 29.5, 25000),
 
 ### 3. Operaciones CRUD en Java
 
+(DatabaseConnection)=
 #### a) Conexión a la Base de Datos
 
 Antes de realizar cualquier operación, primero debemos conectarnos a la base de datos. El siguiente código Java establece la conexión usando JDBC.

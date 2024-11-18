@@ -248,7 +248,7 @@ Esta clase se encargará de la serialización de los objetos que representan la 
 ## Ejercicio
 
 :::{admonition} Taller
-La solución de este taller esta en la carpeta [webpage](./Codes/webpage/), para ejecutar el resultado utilizar el archivo [TestPaginaWeb.java](./Codes/webpage/src/main/java/pagina/TestPaginaWeb.java).
+La solución de este taller esta en la carpeta <a href="../Codes/webpage">webpage</a>, para ejecutar el resultado utilizar el archivo <a href="../Codes/webpage/src/main/java/pagina/TestPaginaWeb.java">TestPaginaWeb.java</a>.
 :::
 
 ## Recursos Adicionales

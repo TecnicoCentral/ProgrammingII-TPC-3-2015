@@ -1,4 +1,4 @@
-# Introducción a las APIs
+# Introducción
 
 ## Objetivo
 Comprender los fundamentos de la API en Java, cómo utilizarla eficientemente, y cómo aplicar el patrón Factory en sus aplicaciones. Los estudiantes conocerán los beneficios del patrón Factory, su aplicabilidad en proyectos de software, y su implementación práctica en Java mediante ejemplos de código.

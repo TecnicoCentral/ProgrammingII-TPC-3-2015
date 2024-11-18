@@ -1,5 +1,9 @@
 # Guía
 
+:::{warning}
+El proyecto debe estar en [GitHub](https://www.github.com) y todos los integrantes del grupo deben participar activamente. La calificación será proporcional a la participación.
+:::
+
 ## 1. Objetivo del Proyecto
 
    El objetivo de este proyecto es que los estudiantes trabajen en equipo para desarrollar una aplicación Java que resuelva un problema práctico, aplicando los conceptos aprendidos a lo largo del curso. El proyecto busca fomentar el trabajo colaborativo, la organización del código y la implementación adecuada de principios de la Programación Orientada a Objetos (POO).
@@ -33,7 +37,7 @@
      - Algunas referencias de interés.
   
 :::{note}
-Hasta aquí va la primera entrega. Recuerden que el reporte debe estar en el repositorio del proyecto y TODOS deben participar activamente.
+Hasta aquí va la primera entrega. Recuerden que el reporte debe estar en el repositorio del proyecto.
 :::
 
    - **Fase 2: Diseño del sistema**  

@@ -389,7 +389,7 @@ public class CalculadoraJavaFX extends Application {
 }
 ```
 
-También pueden revisar en GitHub donde pueden encontrar cientos de ejemplos, [Repositorios](#repositorios).
+También pueden revisar en GitHub donde pueden encontrar cientos de ejemplos, [Repositorios](repositorios_javafx).
 
 ## Ejercicio
 
@@ -420,6 +420,7 @@ JavaFX permite crear aplicaciones de escritorio con interfaces atractivas y func
 - [JavaFX Tutorial for Beginners - CRUD Application Part 1](https:/www.youtube.com/watch?v=CGWRwpeihE8)
 - [► 1. ✅ CURSO PRÁCTICO JAVAFX: Introducción y Características clave - Hola mundo con JAVAFX.](https:/www.youtube.com/watch?v=VMOJ33m0Ooc)
 
+(repositorios_javafx)=
 ### Repositorios
 
 - [javaFX-Calculator](https:/github.com/joiro/javaFX-Calculator)
