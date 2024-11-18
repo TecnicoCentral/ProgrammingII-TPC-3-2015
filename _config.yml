@@ -108,8 +108,8 @@ parse:
     - dollarmath
     - html_admonition
     - html_image
-    - linkify
+    # - linkify
     # - replacements
     # - smartquotes
-    - substitution
-    - tasklist
+    #- substitution
+    #- tasklist

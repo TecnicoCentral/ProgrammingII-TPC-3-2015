@@ -11,7 +11,7 @@
 
 
 ::::{important}
-If you work from Google [Google Colab](https://colab.research.google.com/) **you must** execute the following code block in every notebook, at beginning. Remember that the tutorial on how to configure the environment can be found in the first tutorial: [1. Intruduction To Java](https://github.com/uETITC/ProgrammingII-2024-2/blob/main/Lessons/1.%20IntroductionToJava.md#instalando-el-kernel-de-java). There are several ways and Google Colab is one of them.
+If you work from [Google Colab](https://colab.research.google.com/) **you must** execute the following code block in every notebook, at beginning. Remember that the tutorial on how to configure the environment can be found in the first tutorial: [1. Intruduction To Java](https://github.com/uETITC/ProgrammingII-2024-2/blob/main/Lessons/1.%20IntroductionToJava.md#instalando-el-kernel-de-java). There are several ways and Google Colab is one of them.
 
   :::{code} python
   :class: dropdown

@@ -440,9 +440,9 @@ Todos los códigos deben ser presentados en un Notebook llamado **Taller1.ipynb*
 :::
 ::::
 
-# Recursos Adicionales
+## Recursos Adicionales
 
-## Guias 
+### Guias 
 
 - [Oracle - Java Platform, Standard Edition Java Shell User’s Guide](https://docs.oracle.com/javase/9/jshell/introduction-jshell.htm#JSHEL-GUID-630F27C8-1195-4989-9F6B-2C51D46F52C8)
 - [Differences between JDK, JRE and JVM](https://www.geeksforgeeks.org/differences-jdk-jre-jvm/)
@@ -450,7 +450,7 @@ Todos los códigos deben ser presentados en un Notebook llamado **Taller1.ipynb*
 - [Class Structure & SyntaxS2C Home « Class Structure & Syntax](https://server2client.com/javaobjclasses/classstructure.html)
 
 (documentacion)=
-## Documentación
+### Documentación
 
 - [OpenJDK - java - String class](https://github.com/openjdk/jdk/blob/master/src/java.base/share/classes/java/lang/String.java)
 - [Java String format() Method](https://www.w3schools.com/java/ref_string_format.asp)
@@ -458,7 +458,7 @@ Todos los códigos deben ser presentados en un Notebook llamado **Taller1.ipynb*
 - [openjdk - Docker Official Image](https://hub.docker.com/_/openjdk)
 - [openjdk - openjdk:21-jdk - Multi-platform](https://hub.docker.com/layers/library/openjdk/21-jdk/images/sha256-728a7010f5cc48db66d282d81694e49e9735a1490e831b0bf7a25cfc1b6e964c)
 
-## Vídeos de Youtube 
+### Vídeos de Youtube 
 - [#4 How Java Works ](https://www.youtube.com/watch?v=NHrsLjhjmi4)
 - [Understand the Differences between JVM vs JRE vs JDK in java in one video #1.3](https://www.youtube.com/watch?v=RYd_hagCiVk)
 - [Floating Point Numbers - Computerphile ](https://www.youtube.com/watch?v=PZRI1IfStY0)
