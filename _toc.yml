@@ -1,0 +1,59 @@
+# Table of contents
+# Learn more at https://jupyterbook.org/customize/toc.html
+
+format: jb-book
+root: README
+title: "Programación II"
+
+parts:
+  - caption: "Introducción"
+    numbered: false
+    chapters:
+    - file: Lessons/01-IntroductionToJava.md 
+      sections:
+      - file: Lessons/01-IntroductionToJava_Solution.ipynb
+  - caption: "Fundamentos"
+    chapters:
+    - file: Lessons/02-OOP_Fundamentals_I.ipynb
+      sections:
+      - file: Lessons/02-OOP_Fundamentals_Solution.ipynb
+    - file: Lessons/03-OOP_Fundamentals_II.ipynb
+  - caption: "Diseño y Modelado"
+    chapters:
+    - file: Lessons/04-UML.md
+    - file: Lessons/05-DesignPatterns.md
+      sections:
+      - file: Lessons/05-FactoryPattern.md
+  - caption: "APIs"
+    chapters:
+    - file: Lessons/06-API.md
+    - file: Lessons/06-PokeApiClient.md
+  - caption: "Archivos"
+    chapters:
+    - file: Lessons/07-Archivos.ipynb
+    - file: Lessons/07-Serializable.ipynb
+    - file: Lessons/07-FilesSerializationWorkshop.md
+    sections:
+      - file: FilesSerializationWorkshop.md
+  - caption: "Bases de Datos (BD)"
+    chapters:
+    - file: Lessons/08-DataBases_Types.md
+    - file: Lessons/08-DataBases.md
+    - file: Lessons/09-DB-Workshop.md
+  - caption: "JavaFX"
+    chapters:
+    - file: Lessons/10-JavaFX.md
+  - caption: "Exámenes"
+    chapters:
+    - file: Lessons/Exams/First/First.md
+      sections:
+      - file: Lessons/Exams/First/V1-sol.ipynb
+      - file: Lessons/Exams/First/V2-sol.ipynb
+      
+    - file: Lessons/Exams/Second/Second.md
+      sections:
+        - file: Lessons/Exams/Second/V1.md
+        - file: Lessons/Exams/Second/V2.md
+  - caption: "Proyecto"
+    chapters:
+      - file: Lessons/ProjectGuideLines.md

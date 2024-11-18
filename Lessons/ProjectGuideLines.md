@@ -1,25 +1,4 @@
-# Guía para la Realización del Proyecto 
-
----
-
-<!-- @import "[TOC]" {cmd="toc" depthFrom=1 depthTo=6 orderedList=false} -->
-<!-- code_chunk_output -->
-
-- [Guía para la Realización del Proyecto](#guía-para-la-realización-del-proyecto)
-  - [1. Objetivo del Proyecto](#1-objetivo-del-proyecto)
-  - [2. Descripción del Proyecto](#2-descripción-del-proyecto)
-  - [3. Requisitos Funcionales](#3-requisitos-funcionales)
-  - [4. Fases del Proyecto](#4-fases-del-proyecto)
-  - [5. Criterios de Evaluación](#5-criterios-de-evaluación)
-  - [6. Recursos](#6-recursos)
-  - [7. Entregables](#7-entregables)
-  - [8. Consideraciones Finales](#8-consideraciones-finales)
-  - [9. Fechas Importantes](#9-fechas-importantes)
-  - [10. Recomendaciones](#10-recomendaciones)
-
-<!-- /code_chunk_output -->
-
----
+# Guía
 
 ## 1. Objetivo del Proyecto
 
@@ -53,18 +32,19 @@
      - Posible división de tareas entre los miembros del equipo.
      - Algunas referencias de interés.
   
->[!NOTE]
->Hasta aquí va la primera entrega. Recuerden que el reporte debe estar en el repositorio del proyecto y TODOS deben participar activamente.
-    
+:::{note}
+Hasta aquí va la primera entrega. Recuerden que el reporte debe estar en el repositorio del proyecto y TODOS deben participar activamente.
+:::
+
    - **Fase 2: Diseño del sistema**  
      Objetivo: Definir la estructura del código utilizando diagramas de clases UML y diagramas de secuencia. Presentar cómo se aplicarán los conceptos de POO. Definir que entidades se utilizaran para lo solución del problema, una buena implementación es utilizar paquetes para clases que tengan el mismo objetivo (manejar la base de datos, crear la interfaz gráfica, la lógica de negocio, consulta del API, etc).
 
    - **Fase 3: Desarrollo**  
      Objetivo: Codificar el sistema según el diseño presentado en la fase anterior. Cada equipo debe implementar el sistema utilizando las mejores prácticas de programación (uso de patrones de diseño si es relevante).
 
->[!NOTE]
->Hasta aquí va la segunda entrega. Recuerden que el reporte debe estar en el repositorio del proyecto y TODOS deben participar activamente. Esta entrega debe tener las clases que interactúan con la base de datos y realicen operaciones CRUD, por ahora inventen una table con algo que tenga sentido y después utilizarán los códigos de sus compañeros. Además, deben utilizar un API para consultar datos o imágenes, parecido al examen donde utilizamos una clase para guardar los datos y poder pasarlos a la base de datos con mayor facilidad. Los diagramas no son necesarios por ahora. Finalmente, agreguen una image simple de como quieren que se vea la interfaz, algo muy sencillo que sea solo las figuras. Todo el proyecto debe estar en un repositorio bien documentado, que contenga información de que se requiere para ejecutar el proyecto, como hacerlos, referencias, explicación del código implementado, etc.  
-
+:::{note}
+Hasta aquí va la segunda entrega. Recuerden que el reporte debe estar en el repositorio del proyecto y TODOS deben participar activamente. Esta entrega debe tener las clases que interactúan con la base de datos y realicen operaciones CRUD, por ahora inventen una table con algo que tenga sentido y después utilizarán los códigos de sus compañeros. Además, deben utilizar un API para consultar datos o imágenes, parecido al examen donde utilizamos una clase para guardar los datos y poder pasarlos a la base de datos con mayor facilidad. Los diagramas no son necesarios por ahora. Finalmente, agreguen una image simple de como quieren que se vea la interfaz, algo muy sencillo que sea solo las figuras. Todo el proyecto debe estar en un repositorio bien documentado, que contenga información de que se requiere para ejecutar el proyecto, como hacerlos, referencias, explicación del código implementado, etc.  
+:::
    - **Fase 4: Pruebas**  
      Objetivo: Realizar pruebas de las funcionalidades clave del sistema. Deben documentar los casos de prueba y sus resultados.
 
