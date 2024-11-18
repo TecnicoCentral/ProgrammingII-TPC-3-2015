@@ -24,6 +24,7 @@ parts:
     - file: Lessons/05-DesignPatterns.md
       sections:
       - file: Lessons/05-FactoryPattern.md
+    - file: Lessons/05-MVC.ipynb
   - caption: "APIs"
     chapters:
     - file: Lessons/06-API.md
@@ -43,6 +44,7 @@ parts:
   - caption: "JavaFX"
     chapters:
     - file: Lessons/10-JavaFX.md
+    - file: Lessons/10-SceneBuilder.md
   - caption: "Exámenes"
     chapters:
     - file: Lessons/Exams/First/First.md
