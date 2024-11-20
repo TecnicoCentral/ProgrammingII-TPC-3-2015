@@ -40,7 +40,7 @@ parts:
     chapters:
     - file: Lessons/08-DataBases_Types.md
     - file: Lessons/08-DataBases.md
-    - file: Lessons/08-DataBases1.ipynb
+    #- file: Lessons/08-DataBases1.ipynb
     - file: Lessons/09-DB-Workshop.md
   - caption: "JavaFX"
     chapters:
