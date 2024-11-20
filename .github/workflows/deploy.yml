@@ -35,6 +35,9 @@ jobs:
       run: |
         pip install -r requirements.txt
 
+    - name: Shutdown Ubuntu MySQL (SUDO)
+      run: sudo service mysql stop # Shutdown the Default MySQL, "sudo" is necessary, please not remove it
+  
     - name: Setup MySQL
       uses: mirromutth/mysql-action@v1.1
       with:
