@@ -61,9 +61,9 @@ jobs:
         python install.py --sys-prefix
     - name: MySQL database
       run: |
-        mysql -u dba -P 3306 -p
-        $123456789
+        mysql -u dba -p$123456789 -P 3306
         CREATE DATABASE Universidad;
+        exit;
     
     # (optional) Cache your executed notebooks between runs
     # if you have config:
