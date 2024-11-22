@@ -24,7 +24,7 @@ Puedes encontrar algunos ejemplos en [Samples - Gluon](https://gluonhq.com/devel
 ### Pasos de Instalación
 
 1. **Descargar Scene Builder**:
-   - Ve al sitio oficial de Gluon: [https://gluonhq.com/products/scene-builder/](https://gluonhq.com/products/scene-builder/).
+   - Ve al sitio oficial de Gluon: [JavaFX](https://gluonhq.com/products/javafx/), o utiliza la versión oficial de Oracle: [JavaFX Scene Builder Archive](https://www.oracle.com/java/technologies/javafxscenebuilder-1x-archive-downloads.html).
    - Descarga el instalador adecuado para tu sistema operativo.
 
 2. **Instalar**:
@@ -38,6 +38,8 @@ Puedes encontrar algunos ejemplos en [Samples - Gluon](https://gluonhq.com/devel
    - En Eclipse:
      - Ve a `Window > Preferences > JavaFX`.
      - Configura la ruta del ejecutable de Scene Builder.
+   - En VSC:
+     - La opción recomendada es agregar una dependencia con es Maven o directamente crear el Arquetipo tipo JavaFX, `org.openjfx` . También se puede crear el proyecto sin ninguna herramienta e importar el SDK, después se deben agregar configuraciones al ambiente de trabajo para ejecutar archivos, `Ejecutar > Agregar Configuración`, también se agrega una configuración `"vmArgs": "--module-path /path/to/SDK-javafx-sdk-23.0.1/lib --add-modules javafx.controls,javafx.fxml"`, video tutorial referencia  [How to setup JavaFX in Visual Studio Code 2021 ](https://www.youtube.com/watch?v=AubJaosfI-0).
 
 ## Diseño de una Interfaz Gráfica Básica
 

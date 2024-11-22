@@ -49,6 +49,7 @@ parts:
     chapters:
     - file: Lessons/10-JavaFX.md
     - file: Lessons/10-SceneBuilder.md
+    - file: Lessons/10-LoginApp.md
   - caption: "Exámenes"
     chapters:
     - file: Lessons/Exams/First/First.md

@@ -1,6 +1,4 @@
-# JavaFX
-
-## Introducción
+# Introducción
 
 JavaFX es una biblioteca, también se le llama framework gráfico, de Java que permite desarrollar aplicaciones de interfaz gráfica de usuario (GUI) modernas y visualmente atractivas. Se utiliza para crear aplicaciones de escritorio y proporciona un conjunto de herramientas para construir interfaces visuales interactivas. JavaFX es parte de Java desde JDK 8 y es la alternativa recomendada a la biblioteca Swing.
 
@@ -90,18 +88,18 @@ public class HolaJavaFX extends Application {
 
     @Override
     public void start(Stage primaryStage) {
-        / Crear un botón y configurar su texto
+        // Crear un botón y configurar su texto
         Button btn = new Button();
         btn.setText("¡Haz clic aquí!");
         
-        / Añadir una acción al botón
+        // Añadir una acción al botón
         btn.setOnAction(event -> System.out.println("¡Botón presionado!"));
 
-        / Crear un contenedor para el botón
+        // Crear un contenedor para el botón
         StackPane root = new StackPane();
         root.getChildren().add(btn);
 
-        / Crear una escena y agregarla al escenario
+        // Crear una escena y agregarla al escenario
         Scene scene = new Scene(root, 300, 250);
         primaryStage.setTitle("Primera aplicación JavaFX");
         primaryStage.setScene(scene);
@@ -109,7 +107,7 @@ public class HolaJavaFX extends Application {
     }
 
     public static void main(String[] args) {
-        launch(args);  / Lanza la aplicación JavaFX
+        launch(args);  // Lanza la aplicación JavaFX
     }
 }
 ```

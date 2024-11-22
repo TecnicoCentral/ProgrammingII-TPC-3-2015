@@ -1,3 +1,3 @@
 # Ejemplos
 
-Ejemplos de uso de APIs publicas sin llaves.
+Algunos ejemplos de uso de APIs publicas sin llaves.
