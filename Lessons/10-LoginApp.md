@@ -19,7 +19,7 @@ Además, la funcionalidad estará conectada a una base de datos que permitirá v
 
 - Conocimiento básico de **JavaFX**.
 - Familiaridad con **bases de datos MySQL** y conexión mediante JDBC.
-- IDE con soporte para JavaFX (como IntelliJ IDEA, Eclipse, o NetBeans).
+- IDE con soporte para JavaFX (como IntelliJ IDEA, Eclipse, NetBeans, o VSC).
 - Base de datos MySQL configurada y corriendo.
 
 ## Desarrollo del Taller

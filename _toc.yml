@@ -37,11 +37,10 @@ parts:
     - file: Lessons/07-Archivos.ipynb
     - file: Lessons/07-Serializable.ipynb
     - file: Lessons/07-FilesSerializationWorkshop.md
-    sections:
-      - file: FilesSerializationWorkshop.md
-  - caption: "Bases de Datos (BD)"
+  - caption: "Bases de Datos (DB)"
     chapters:
     - file: Lessons/08-DataBases_Types.md
+    - file: Lessons/08-MySQL-Installation.md
     - file: Lessons/08-DataBases.md
     #- file: Lessons/08-DataBases1.ipynb
     - file: Lessons/09-DB-Workshop.md
@@ -64,3 +63,4 @@ parts:
   - caption: "Proyecto"
     chapters:
       - file: Lessons/ProjectGuideLines.md
+      - file: Lessons/ProjectTemplate.md
