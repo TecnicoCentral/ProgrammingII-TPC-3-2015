@@ -1,4 +1,4 @@
-# Taller Práctico: Creación de una Interfaz de Ingreso
+# Taller: Interfaz de Ingreso
 
 ## Introducción
 
@@ -24,38 +24,102 @@ Además, la funcionalidad estará conectada a una base de datos que permitirá v
 
 ## Desarrollo del Taller
 
+### Paso 0: Configuración del Proyecto
+
+1. Crear un proyecto de java usando Maven con arquetipo `org.javafx`. 
+2. Descargar el kit de desarrollo de software (SDK) de openjfx, [JavaFX](https://gluonhq.com/products/javafx/), e importarlo al proyecto. Para importarlos debe crear un archivo de configuración en VSC, `Ejecutar > Agregar Configuración` el cual creara un archivo `.vscode/launch.json`. 
+3. Agregar el SDK al entorno de ejecución. Editar el archivo `.vscode/launch.json` y agregar `"vmArgs": "--module-path /path/to/SDK-javafx-sdk-23.0.1/lib --add-modules javafx.controls,javafx.fxml"` cambiando `/path/to/SDK-javafx-sdk-23.0.1/lib` a la dirección correcta donde están descomprimido los paquetes de java. 
+ 
+    Ejemplo:
+    ```json
+    {
+      "version": "0.2.0",
+      "configurations": [
+        {
+          "type": "java",
+          "name": "Current File",
+          "request": "launch",
+          "mainClass": "${file}"
+        },
+        {
+          "type": "java",
+          "name": "App",
+          "request": "launch",
+          "mainClass": "com.App",
+          "projectName": "javafx_final",
+          "vmArgs": "--module-path /home/saguileran/Downloads/openjfx-23.0.1_linux-x64_bin-sdk/javafx-sdk-23.0.1/lib --add-modules javafx.controls,javafx.fxml"
+        }
+      ]
+    }
+   ```
+4. Agregar la dependencia de Maven para la conexión a la base de datos, `com.mysql`:
+
+    ```xml
+    <dependency>
+        <groupId>com.mysql</groupId>
+        <artifactId>mysql-connector-j</artifactId>
+        <version>9.1.0</version>
+      </dependency>
+    ```
+
+    Y actualizar la versión de java de Maven para evitar problemas de compilación y ejecución:
+    ```xml
+    <properties>
+      <maven.compiler.source>21</maven.compiler.source>
+      <maven.compiler.target>21</maven.compiler.target>
+    </properties>
+    ```
+    La versión de java debe ser igual o superior a 21, en otro caso se generarán errores de compilación y/o ejecución.
+
+:::{important}
+Todos los archivos `fxml` deben ser almacenados en la carpeta de `resources/com`. Además, **deben eliminar el archivo `module-info.java`** para que el driver de mysql funcione correctamente.
+:::
+
 ### Paso 1: Crear la Base de Datos
-En MySQL, crea una base de datos llamada `LoginApp` y una tabla llamada `Users`:
+En MySQL, crea una base de datos llamada `LoginApp`:
 
 ```sql
 CREATE DATABASE LoginApp;
-
-USE LoginApp;
-
-CREATE TABLE Users (
-    id INT AUTO_INCREMENT PRIMARY KEY,
-    username VARCHAR(50) UNIQUE NOT NULL,
-    password VARCHAR(50) NOT NULL
-);
 ```
+
+Pueden ejecutar este comando desde MySQL Workbrench o desde la terminal. Para ingresar via terminal a MySQL pueden usar el siguiente comando:
+
+```bash
+mysql -u root -P 3306 -p
+```
+
+Después ingresan la contraseña y ejecutan el comando.
 
 ### Paso 2: Estructura del Proyecto MVC
 Crea un proyecto en tu IDE con la siguiente estructura:
 
 ```
-src/
-├── controller/
-│   └── LoginController.java
-├── model/
-│   └── UserModel.java
-├── view/
-│   └── LoginView.fxml
-├── Main.java
+├── pom.xml
+├── src
+│   └── main
+│       ├── java
+│       │   └── com
+│       │       ├── App.java
+│       │       ├── controller
+│       │       │   ├── LoginController.java
+│       │       ├── model
+│       │       │   └── UserModel.java
+│       └── resources
+│           └── com
+│               ├── LoginView.fxml
 ```
+
+El proyecto (artifactId) puede llamarse como quieran, para ser coherentes con este ejemplo el groupId debe ser nombrado `com`. 
+
+:::{note}
+Los nombres del artefacto y del grupo no son relevantes para el funcionamiento.
+:::
 
 ### Paso 3: Implementar el Modelo
 
-El **modelo** maneja la interacción con la base de datos. Crea la clase `UserModel`:
+El **modelo** maneja la interacción con la base de datos. Es necesario escribir el usuario y contraseña correctos de MySQL.
+
+Crea la clase `UserModel`:
 
 ```java
 package model;
@@ -64,16 +128,39 @@ import java.sql.Connection;
 import java.sql.DriverManager;
 import java.sql.PreparedStatement;
 import java.sql.ResultSet;
+import java.sql.Statement;
+
 
 public class UserModel {
+    private static final String URL_DB = "jdbc:mysql://localhost:3306/LoginApp";
+    private static final String USER = "root";
+    private static final String PASSWORD = "123456";
     private Connection connection;
 
     public UserModel() {
         try {
-            connection = DriverManager.getConnection("jdbc:mysql://localhost:3306/LoginApp", "root", "password");
+            connection = DriverManager.getConnection(URL_DB, USER, PASSWORD);
         } catch (Exception e) {
             e.printStackTrace();
         }
+    }
+
+    public int CreateTable(){
+      try{
+        String query = "CREATE TABLE IF NOT EXISTS Users ("+
+                          "id INT AUTO_INCREMENT PRIMARY KEY,"+
+                          "username VARCHAR(50) UNIQUE NOT NULL,"+
+                          "password VARCHAR(50) NOT NULL,"+
+                          "image VARCHAR(200) NULL"+
+                       ");";;
+
+        Statement stmt = connection.createStatement();
+        int result = stmt.executeUpdate(query);
+        return result;
+      } catch (Exception e) {
+            e.printStackTrace();
+      }
+      return -1;
     }
 
     public boolean validateUser(String username, String password) {
@@ -90,12 +177,13 @@ public class UserModel {
         return false;
     }
 
-    public boolean registerUser(String username, String password) {
+    public boolean registerUser(String username, String password, String image) {
         try {
-            String query = "INSERT INTO Users (username, password) VALUES (?, ?)";
+            String query = "INSERT INTO Users (username, password, image) VALUES (?, ?, ?)";
             PreparedStatement statement = connection.prepareStatement(query);
             statement.setString(1, username);
             statement.setString(2, password);
+            statement.setString(3, image);
             statement.executeUpdate();
             return true;
         } catch (Exception e) {
@@ -108,90 +196,11 @@ public class UserModel {
 
 ### Paso 4: Crear la Vista
 
-Usa **Scene Builder** para diseñar la vista o escribe el archivo `LoginView.fxml` directamente:
-
-```xml
-<?xml version="1.0" encoding="UTF-8"?>
-<?import javafx.geometry.*?>
-<?import javafx.scene.control.*?>
-<?import javafx.scene.image.*?>
-<?import javafx.scene.layout.*?>
-
-<BorderPane xmlns:fx="http://javafx.com/fxml" fx:controller="controller.LoginController">
-    <left>
-        <ImageView fitWidth="300" fitHeight="400">
-            <Image url="https://via.placeholder.com/300x400" />
-        </ImageView>
-    </left>
-    <center>
-        <VBox alignment="CENTER" spacing="20" prefWidth="300" padding="20">
-            <TextField fx:id="usernameField" promptText="Username" />
-            <PasswordField fx:id="passwordField" promptText="Password" />
-            <Button text="Login" onAction="#handleLogin" prefWidth="100" />
-            <Button text="Register" onAction="#handleRegister" prefWidth="100" />
-        </VBox>
-    </center>
-</BorderPane>
-```
+Usa **Scene Builder** para diseñar la vista o escribe el archivo `LoginView.fxml` directamente.
 
 ### Paso 5: Implementar el Controlador
 
-Crea el controlador `LoginController`:
-
-```java
-package controller;
-
-import javafx.fxml.FXML;
-import javafx.scene.control.Alert;
-import javafx.scene.control.PasswordField;
-import javafx.scene.control.TextField;
-import model.UserModel;
-
-public class LoginController {
-    @FXML
-    private TextField usernameField;
-    @FXML
-    private PasswordField passwordField;
-
-    private UserModel userModel;
-
-    public LoginController() {
-        userModel = new UserModel();
-    }
-
-    @FXML
-    private void handleLogin() {
-        String username = usernameField.getText();
-        String password = passwordField.getText();
-
-        if (userModel.validateUser(username, password)) {
-            showAlert(Alert.AlertType.INFORMATION, "Login Successful", "Welcome, " + username + "!");
-        } else {
-            showAlert(Alert.AlertType.ERROR, "Login Failed", "Invalid username or password.");
-        }
-    }
-
-    @FXML
-    private void handleRegister() {
-        String username = usernameField.getText();
-        String password = passwordField.getText();
-
-        if (userModel.registerUser(username, password)) {
-            showAlert(Alert.AlertType.INFORMATION, "Registration Successful", "User registered successfully!");
-        } else {
-            showAlert(Alert.AlertType.ERROR, "Registration Failed", "Username already exists.");
-        }
-    }
-
-    private void showAlert(Alert.AlertType type, String title, String message) {
-        Alert alert = new Alert(type);
-        alert.setTitle(title);
-        alert.setHeaderText(null);
-        alert.setContentText(message);
-        alert.showAndWait();
-    }
-}
-```
+Crea el controlador `LoginController` utilizando Scene Builder.
 
 ### Paso 6: Configurar el Punto de Entrada
 
@@ -207,17 +216,30 @@ import javafx.stage.Stage;
 public class Main extends Application {
     @Override
     public void start(Stage primaryStage) throws Exception {
-        Parent root = FXMLLoader.load(getClass().getResource("view/LoginView.fxml"));
+        scene = new Scene(loadFXML("LoginView"), 640, 480);
         primaryStage.setTitle("Login Application");
         primaryStage.setScene(new Scene(root, 600, 400));
         primaryStage.show();
     }
 
+    public static void setRoot(String fxml) throws IOException {
+        scene.setRoot(loadFXML(fxml));
+    }
+
+    private static Parent loadFXML(String fxml) throws IOException {
+        FXMLLoader fxmlLoader = new FXMLLoader(App.class.getResource(fxml + ".fxml"));
+        return fxmlLoader.load();
+    }
+
     public static void main(String[] args) {
-        launch(args);
+        launch();
     }
 }
 ```
+
+:::{note}
+Un proyecto puede tener varias vistas, varios archivos fxml, y cada vista debe tener su respectivo controlador. Para cambiar entre vistas basta con crear un método que se ejecute al presionar un botón, este método debe ejecutar el método `App.setRoot("VistaNombre")`.
+:::
 
 ## Conclusión
 
