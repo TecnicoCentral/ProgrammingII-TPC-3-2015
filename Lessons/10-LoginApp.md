@@ -1,4 +1,4 @@
-# Taller Práctico: Creación de una Interfaz de Ingreso con JavaFX y MVC
+# Taller Práctico: Creación de una Interfaz de Ingreso
 
 ## Introducción
 
