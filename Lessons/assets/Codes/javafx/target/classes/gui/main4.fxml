@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<?import javafx.geometry.*?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.image.*?>
+<?import javafx.scene.layout.*?>
+
+<BorderPane xmlns:fx="http://javafx.com/fxml" fx:controller="controller.LoginController">
+    <left>
+        <ImageView fitWidth="300" fitHeight="400">
+            <Image url="https://via.placeholder.com/300x400" />
+        </ImageView>
+    </left>
+    <center>
+        <VBox alignment="CENTER" spacing="20" prefWidth="300" padding="20">
+            <TextField fx:id="usernameField" promptText="Username" />
+            <PasswordField fx:id="passwordField" promptText="Password" />
+            <Button text="Login" onAction="#handleLogin" prefWidth="100" />
+            <Button text="Register" onAction="#handleRegister" prefWidth="100" />
+        </VBox>
+    </center>
+</BorderPane>
