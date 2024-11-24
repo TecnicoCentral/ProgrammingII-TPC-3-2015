@@ -1,17 +1,14 @@
-FROM ubuntu/mysql:latest
+FROM eclipse-temurin:21-jdk-jammy
 
 RUN apt-get update
-RUN apt-get install -y python3-pip unzip wget
+RUN apt-get install -y python3-pip unzip
 
 # add requirements.txt, written this way to gracefully ignore a missing file
 COPY requirements.tx[t] .
 RUN ([ -f requirements.txt ] \
     && pip3 install --no-cache-dir -r requirements.txt) \
-    || pip3 install --no-cache-dir jupyter jupyterlab 
+        || pip3 install --no-cache-dir jupyter jupyterlab
 
-RUN apt-get update \ 
-    && wget https://download.oracle.com/java/21/latest/jdk-21_linux-x64_bin.deb \
-    && dpkg -i jdk-22_linux-x64_bin.deb
 USER root
 
 # Download the kernel release
@@ -21,13 +18,9 @@ RUN curl -L https://github.com/SpencerPark/IJava/releases/download/v1.3.0/ijava-
 RUN unzip ijava-kernel.zip -d ijava-kernel \
   && cd ijava-kernel \
   && python3 install.py --sys-prefix \
-  && pip3 install git+git://github.com/Hourout/mysql_kernel.git\
-  && python3 -m mysql_kernel.install
+  && pip3 install mysql_kernel \
+  && python -m mysql_kernel.install
 
-RUN sudo service mysql start \ 
-    && mysql -u root -p $123456789 -P 3306 \
-    && CREATE USER 'dba'@'localhost' IDENTIFIED BY '$123456789'; \
-    && GRANT ALL PRIVILEGES ON Universidad.* TO 'dba'@'localhost';
 # Set up the user environment
 
 ENV NB_USER jovyan
