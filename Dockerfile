@@ -17,23 +17,25 @@ RUN curl -L https://github.com/SpencerPark/IJava/releases/download/v1.3.0/ijava-
 # Unpack and install the kernel
 RUN unzip ijava-kernel.zip -d ijava-kernel \
   && cd ijava-kernel \
-  && python3 install.py --sys-prefix
+  && python3 install.py --sys-prefix \
+  && pip3 install git+git://github.com/Hourout/mysql_kernel.git\
+  && python3 -m mysql_kernel.install
 
 # Set up the user environment
 
-ENV NB_USER jovyan
-ENV NB_UID 1000
-ENV HOME /home/$NB_USER
+# ENV NB_USER jovyan
+# ENV NB_UID 1000
+# ENV HOME /home/$NB_USER
 
-RUN adduser --disabled-password \
-    --gecos "Default user" \
-    --uid $NB_UID \
-    $NB_USER
+# RUN adduser --disabled-password \
+#     --gecos "Default user" \
+#     --uid $NB_UID \
+#     $NB_USER
 
-COPY . $HOME
-RUN chown -R $NB_UID $HOME
+# COPY . $HOME
+# RUN chown -R $NB_UID $HOME
 
-USER $NB_USER
+# USER $NB_USER
 
 # Launch the notebook server
 WORKDIR $HOME
