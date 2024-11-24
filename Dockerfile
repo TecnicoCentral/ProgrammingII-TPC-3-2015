@@ -17,9 +17,10 @@ RUN curl -L https://github.com/SpencerPark/IJava/releases/download/v1.3.0/ijava-
 # Unpack and install the kernel
 RUN unzip ijava-kernel.zip -d ijava-kernel \
   && cd ijava-kernel \
-  && python3 install.py --sys-prefix \
-  && pip3 install mysql_kernel \
-  && python -m mysql_kernel.install
+  && python3 install.py --sys-prefix
+
+RUN pip3 install mysql_kernel \
+    && python3 -m mysql_kernel.install
 
 # Set up the user environment
 
