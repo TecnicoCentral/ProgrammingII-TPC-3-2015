@@ -24,6 +24,10 @@ RUN unzip ijava-kernel.zip -d ijava-kernel \
   && pip3 install git+git://github.com/Hourout/mysql_kernel.git\
   && python3 -m mysql_kernel.install
 
+RUN sudo service mysql start \ 
+    && mysql -u root -p $123456789 -P 3306 \
+    && CREATE USER 'dba'@'localhost' IDENTIFIED BY '$123456789'; \
+    && GRANT ALL PRIVILEGES ON Universidad.* TO 'dba'@'localhost';
 # Set up the user environment
 
 ENV NB_USER jovyan

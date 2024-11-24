@@ -35,8 +35,8 @@ jobs:
       run: |
         pip install -r requirements.txt
 
-    - name: Shutdown Ubuntu MySQL (SUDO)
-      run: sudo service mysql stop # Shutdown the Default MySQL, "sudo" is necessary, please not remove it
+    # - name: Shutdown Ubuntu MySQL (SUDO)
+    #   run: sudo service mysql stop # Shutdown the Default MySQL, "sudo" is necessary, please not remove it
   
     - name: Setup MySQL
       uses: mirromutth/mysql-action@v1.1
@@ -52,11 +52,12 @@ jobs:
         # mysql password: $123456789 # Required if "mysql user" exists. The password for the "mysql user"
     - name: Shutdown Ubuntu MySQL (SUDO)
       run: |
-        sudo service mysql start
         mysql -u root -p $123456789 -P 3306
         CREATE USER 'dba'@'localhost' IDENTIFIED BY '$123456789';
         GRANT ALL PRIVILEGES ON Universidad.* TO 'dba'@'localhost';
-        
+        exit;
+      # sudo service mysql start
+          
         
       # Shutdown the Default MySQL, "sudo" is necessary, please not remove it
     
