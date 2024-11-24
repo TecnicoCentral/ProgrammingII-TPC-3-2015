@@ -7,7 +7,8 @@ RUN apt-get install -y python3-pip unzip
 COPY requirements.tx[t] .
 RUN ([ -f requirements.txt ] \
     && pip3 install --no-cache-dir -r requirements.txt) \
-        || pip3 install --no-cache-dir jupyter jupyterlab
+    || pip3 install --no-cache-dir jupyter jupyterlab \ 
+    && sudo apt install mysql-server
 
 USER root
 
