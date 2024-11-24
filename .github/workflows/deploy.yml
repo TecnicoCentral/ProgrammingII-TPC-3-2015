@@ -50,8 +50,8 @@ jobs:
         mysql root password: $12345679 # Required if "mysql user" is empty, default is empty. The root superuser password
         # mysql user: 'dba' # Required if "mysql root password" is empty, default is empty. The superuser for the specified database. Can use secrets, too
         # mysql password: $123456789 # Required if "mysql user" exists. The password for the "mysql user"
-    # - name: Shutdown Ubuntu MySQL (SUDO)
-    #   run: |
+    - name: Shutdown Ubuntu MySQL (SUDO)
+      run: sudo service mysql start
     #     mysql -u root -p $123456789 -P 3306
     #     CREATE USER 'dba'@'localhost' IDENTIFIED BY '$123456789';
     #     GRANT ALL PRIVILEGES ON Universidad.* TO 'dba'@'localhost';
@@ -73,10 +73,10 @@ jobs:
         wget https://github.com/SpencerPark/IJava/releases/download/v1.3.0/ijava-1.3.0.zip
         unzip ijava-1.3.0.zip
         python install.py --sys-prefix
-    - name: Install MySQL Kernel
-      run: |
-        pip install mysql_kernel
-        python -m mysql_kernel.install
+    # - name: Install MySQL Kernel
+    #   run: |
+    #     pip install mysql_kernel
+    #     python -m mysql_kernel.install
     # - name: MySQL database
     #   run: |
     #     sudo mysql -u dba -p$123456789 -P 3306
