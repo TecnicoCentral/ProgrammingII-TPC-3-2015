@@ -117,32 +117,49 @@ Después ingresan la contraseña y ejecutan el comando. Para salir ejecute `exit
 ### Paso 2: Estructura del Proyecto MVC
 Crea un proyecto en tu IDE con la siguiente estructura:
 
+::::{grid}
+
+:::{grid-item}
+:margin: auto auto 0 0
+:columns: 7
+
 ```
 LoginApp
-├── pom.xml
-├── src
-│   └── main
-│       ├── java
-│       │   └── com
-│       │       ├── App.java
-│       │       ├── controller
-│       │       │   ├── LoginController.java
-│       │       └── model
-│       │           └── UserModel.java
-│       └── resources
-│           └── com
-│               ├── LoginView.fxml
-└── target
-    ├── classes
-    │   └── com
-    │       ├── App.class
-    │       ├── controller
-    │       │   ├── LoginController.class
-    │       ├── model
-    │       │   └── UserModel.class
-    │       ├── LoginView.fxml
-    └── test-classes
+├─ pom.xml
+├─ src
+│  └─ main
+│     ├─ java
+│     │  └─ com
+│     │     ├─ App.java
+│     │     ├─ controller
+│     │     │  ├─ LoginController.java
+│     │     └─ model
+│     │        └─ UserModel.java
+│     └─ resources
+│        └─ com
+│           ├─ LoginView.fxml
+└─ target
+   ├─ classes
+   │  └─ com
+   └─ test-classes
 ```
+
+:::
+
+:::{grid-item}
+:margin: auto auto 0 0
+:columns: 5
+
+```{figure} ../../images/estructuraLoginApp.png 
+---
+name: tallerEstructura
+width: 90%
+---
+Estructura del proyecto.
+```
+
+:::
+::::
 
 El proyecto (artifactId) puede llamarse como quieran, para ser coherentes con este ejemplo el groupId debe ser nombrado `com`. 
 

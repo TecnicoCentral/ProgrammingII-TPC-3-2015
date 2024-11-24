@@ -18,9 +18,8 @@ public class App extends Application {
 
     @Override
     public void start(Stage stage) throws IOException {
-        // Testing mysql by creating a table in the LoginApp schema (database)
-        System.out.println(new UserModel().CreateTable());
-        scene = new Scene(loadFXML("primary"), 640, 480);
+        scene = new Scene(loadFXML("LoginView"), 640, 480);
+        stage.setTitle("Login Application");
         stage.setScene(scene);
         stage.show();
     }
@@ -35,6 +34,9 @@ public class App extends Application {
     }
 
     public static void main(String[] args) {
+        // Testing mysql conexion by creating a table in the LoginApp schema (database)
+        System.out.println(new UserModel().CreateTable());
+
         launch();
     }
 
