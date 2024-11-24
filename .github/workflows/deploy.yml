@@ -67,7 +67,7 @@ jobs:
         python install.py --sys-prefix
     - name: Install MySQL Kernel
       run: |
-        pip install git+git://github.com/Hourout/mysql_kernel.git\
+        pip install mysql_kernel
         python -m mysql_kernel.install
     # - name: MySQL database
     #   run: |
