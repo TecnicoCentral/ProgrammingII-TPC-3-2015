@@ -1,4 +1,4 @@
-FROM eclipse-temurin:21-jdk-jammy
+FROM ubuntu/mysql:latest
 
 RUN apt-get update
 RUN apt-get install -y python3-pip unzip
@@ -8,8 +8,7 @@ COPY requirements.tx[t] .
 RUN ([ -f requirements.txt ] \
     && pip3 install --no-cache-dir -r requirements.txt) \
     || pip3 install --no-cache-dir jupyter jupyterlab \ 
-    && sudo apt install mysql-server
-
+    && sudo apt install openjdk-21-jdk
 USER root
 
 # Download the kernel release
@@ -24,19 +23,19 @@ RUN unzip ijava-kernel.zip -d ijava-kernel \
 
 # Set up the user environment
 
-# ENV NB_USER jovyan
-# ENV NB_UID 1000
-# ENV HOME /home/$NB_USER
+ENV NB_USER jovyan
+ENV NB_UID 1000
+ENV HOME /home/$NB_USER
 
-# RUN adduser --disabled-password \
-#     --gecos "Default user" \
-#     --uid $NB_UID \
-#     $NB_USER
+RUN adduser --disabled-password \
+    --gecos "Default user" \
+    --uid $NB_UID \
+    $NB_USER
 
-# COPY . $HOME
-# RUN chown -R $NB_UID $HOME
+COPY . $HOME
+RUN chown -R $NB_UID $HOME
 
-# USER $NB_USER
+USER $NB_USER
 
 # Launch the notebook server
 WORKDIR $HOME
