@@ -153,7 +153,7 @@ LoginApp
 ```{figure} ../../images/estructuraLoginApp.png 
 ---
 name: tallerEstructura
-width: 90%
+width: 100%
 ---
 Estructura del proyecto.
 ```
