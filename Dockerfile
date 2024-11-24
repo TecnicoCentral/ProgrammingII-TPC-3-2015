@@ -11,7 +11,7 @@ RUN ([ -f requirements.txt ] \
 
 RUN apt-get update \ 
     && wget https://download.oracle.com/java/21/latest/jdk-21_linux-x64_bin.deb \
-    && sudo dpkg -i jdk-22_linux-x64_bin.deb
+    && dpkg -i jdk-22_linux-x64_bin.deb
 USER root
 
 # Download the kernel release
