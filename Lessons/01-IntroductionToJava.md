@@ -1,5 +1,7 @@
 # Configuración de Java
 
+## Historia
+
 Java fue desarrollado por Sun Microsystems en 1995 como un lenguaje de programación robusto, portátil y orientado a objetos. Su objetivo era permitir que los desarrolladores escribieran código una vez y lo ejecutaran en cualquier dispositivo, gracias a la Máquina Virtual Java (JVM). Java ha evolucionado para convertirse en uno de los lenguajes más populares y utilizados en el mundo, siendo fundamental en aplicaciones empresariales, desarrollo web, móviles (Android) y sistemas embebidos. Aprender Java es crucial para cualquier programador, ya que ofrece una base sólida en programación orientada a objetos y una amplia demanda en la industria tecnológica, asegurando versatilidad y oportunidades de empleo.
 
 ::::{grid}
@@ -78,26 +80,81 @@ Después exploraremos los tipos de variables en java y como imprimirlos de difer
 
 Lo más recomendable es descargar la versión más reciente de java, 22, pero para evitar inconveniendes se sugiere descargar la versión 21.
 
-#### Windows 
+::::{tab-set}
+:::{tab-item} Windows 
 
 Descarga openjdk de la página oficial de [Oracle](https://www.oracle.com/java/technologies/javase-downloads.html). 
+:::  
+:::{tab-item} Ubuntu
 
-#### Ubuntu
+Descargar la versión 21 de java 
 
 ```bash
 sudo apt install openjdk-21-jdk
 ```
 
-Para verificar si java fue instalado correctamente abre una terminal: CMD o de Power Shell si estas en Windows, o una terminal simple en Ubuntu, y ejecuta:
+:::
+::::
+
+Para verificar si java fue instalado correctamente abre una terminal: CMD o de Power Shell si estas en Windows, o una terminal de Ubuntu, y ejecuta:
 
 ```bash
 java -version
 javac -version
 ```
+Posible resultado:
+
+```bash
+java version "23.0.1" 2024-10-15
+Java(TM) SE Runtime Environment (build 23.0.1+11-39)
+Java HotSpot(TM) 64-Bit Server VM (build 23.0.1+11-39, mixed mode, sharing)
+```
 
 ### Ejecutando Java
 
-#### JShell
+:::::{tab-set}
+::::{tab-item} Línea de Comandos
+
+**Línea de Comandos (CLI)**
+
+**Paso 1:** Asegúrate de tener Java instalado.
+- Abre una terminal y escribe `java -version`. Debes ver la versión de Java instalada.
+- Si no está instalado, descárgalo e instálalo desde [Oracle](https://www.oracle.com/java/technologies/javase-downloads.html).
+
+**Paso 2:** Crear el archivo fuente.
+- Abre tu editor de texto favorito y escribe el siguiente código:
+
+```java
+public class HelloWorld {
+    public static void main(String[] args) {
+        System.out.println("Hello World");
+    }
+}
+```
+
+- Guarda el archivo como `HelloWorld.java`.
+
+**Paso 3:** Compilar el código.
+- Navega al directorio donde guardaste `HelloWorld.java` usando la terminal.
+- Ejecuta el siguiente comando para compilar el programa:
+
+```bash
+javac HelloWorld.java
+```
+
+- Esto generará un archivo `HelloWorld.class`.
+
+**Paso 4:** Ejecutar el programa.
+- Ejecuta el programa compilado con el siguiente comando:
+
+```bash
+java HelloWorld
+```
+
+- Deberías ver "Hello World" impreso en la consola.
+
+::::
+::::{tab-item} JShell
 
 JShell es una herramienta de la línea de comandos que viene con Java a partir de la versión 9. Es un REPL (Read-Eval-Print Loop) para Java, que permite ejecutar fragmentos de código de forma interactiva sin la necesidad de compilar y ejecutar un programa completo. Es ideal para probar pequeños fragmentos de código o para aprender y enseñar conceptos de Java.
 
@@ -147,45 +204,32 @@ Para salir de JShell, escribe:
 
 o ingresa el comando `ctrl+d`, esto cerrará la sesión de JShell.
 
-####  Línea de Comandos (CLI)
+::::
+::::{tab-item} VSC
 
-**Paso 1:** Asegúrate de tener Java instalado.
-- Abre una terminal y escribe `java -version`. Debes ver la versión de Java instalada.
-- Si no está instalado, descárgalo e instálalo desde [Oracle](https://www.oracle.com/java/technologies/javase-downloads.html).
+**Visual Studio Code (VSC)**
 
-**Paso 2:** Crear el archivo fuente.
-- Abre tu editor de texto favorito y escribe el siguiente código:
+Es altamente recomendado que descarguen [Anaconda](https://www.anaconda.com/download), este es un entorno desarrollado para Python que permite trabajar con notebooks de forma sencilla y óptima.
 
-```java
-public class HelloWorld {
-    public static void main(String[] args) {
-        System.out.println("Hello World");
-    }
-}
-```
+**Paso 1:** Instalar Visual Studio Code y la extensión de Java.
+- Descarga Visual Studio Code desde [aquí](https://code.visualstudio.com/).
+- Instala la extensión de Java: Ve a la sección de extensiones (ícono de cubos) y busca `Java Extension Pack`. Instálala.
 
-- Guarda el archivo como `HelloWorld.java`.
+**Paso 2:** Crear un nuevo archivo Java.
+- Abre VS Code y crea un nuevo archivo llamado `HelloWorld.java`.
 
-**Paso 3:** Compilar el código.
-- Navega al directorio donde guardaste `HelloWorld.java` usando la terminal.
-- Ejecuta el siguiente comando para compilar el programa:
-
-```bash
-javac HelloWorld.java
-```
-
-- Esto generará un archivo `HelloWorld.class`.
+**Paso 3:** Escribir el código.
+-  Escribe el código "HelloWorld" ya creado anteriormente en el editor.
 
 **Paso 4:** Ejecutar el programa.
-- Ejecuta el programa compilado con el siguiente comando:
+- Guarda el archivo y haz clic en `Run` en la esquina superior derecha de VS Code o presiona `Ctrl + F5`.
+- VS Code compilará y ejecutará el programa, mostrando "Hello World" en la terminal integrada.
 
-```bash
-java HelloWorld
-```
+**Paso 5:** Java Notebooks.
+- Descargar e instalar [IJava](https://github.com/SpencerPark/IJava). Pueden seguir el tutorial [Java in Jupyter Notebooks -- Part 1: Introduction to Java Programming in Jupyter Notebook ](https://www.youtube.com/watch?v=UKT6t9R5RHA).
 
-- Deberías ver "Hello World" impreso en la consola.
-
-#### Eclipse
+::::
+::::{tab-item} Eclipse
 
 **Paso 1:** Descargar e instalar Eclipse.
 - Descarga Eclipse desde [aquí](https://www.eclipse.org/downloads/). 
@@ -207,7 +251,8 @@ java HelloWorld
 - Haz clic derecho en el archivo `HelloWorld.java` y selecciona `Run As` > `Java Application`.
 - El programa se ejecutará y mostrará "Hello World" en la consola de Eclipse.
 
-#### NetBeans
+::::
+::::{tab-item} NetBeans
 
 **Paso 1:** Descargar e instalar NetBeans.
 - Descarga NetBeans desde [aquí](https://netbeans.apache.org/download/index.html).
@@ -226,30 +271,8 @@ java HelloWorld
 - Haz clic en el botón `Run Project` (ícono de triángulo verde).
 - Verás "Hello World" en la ventana de salida de NetBeans.
 
-#### Visual Studio Code (VSC)
-
-Es altamente recomendado que descarguen [Anaconda](https://www.anaconda.com/download), este es un entorno desarrollado para Python que permite trabajar con notebooks de forma sencilla y óptima.
-
-**Paso 1:** Instalar Visual Studio Code y la extensión de Java.
-- Descarga Visual Studio Code desde [aquí](https://code.visualstudio.com/).
-- Instala la extensión de Java: Ve a la sección de extensiones (ícono de cubos) y busca `Java Extension Pack`. Instálala.
-
-**Paso 2:** Crear un nuevo archivo Java.
-- Abre VS Code y crea un nuevo archivo llamado `HelloWorld.java`.
-
-**Paso 3:** Escribir el código.
--  Escribe el código "HelloWorld" ya creado anteriormente en el editor.
-
-**Paso 4:** Ejecutar el programa.
-- Guarda el archivo y haz clic en `Run` en la esquina superior derecha de VS Code o presiona `Ctrl + F5`.
-- VS Code compilará y ejecutará el programa, mostrando "Hello World" en la terminal integrada.
-
-**Paso 5:** Java Notebooks.
-- Descargar e instalar [IJava](https://github.com/SpencerPark/IJava). Pueden seguir el tutorial [Java in Jupyter Notebooks -- Part 1: Introduction to Java Programming in Jupyter Notebook ](https://www.youtube.com/watch?v=UKT6t9R5RHA).
-
-
-
-### Docker
+::::
+::::{tab-item} Docker
 
 Docker es una plataforma de contenedorización que permite empaquetar aplicaciones junto con todas sus dependencias en un contenedor ligero y portátil. Esto asegura que la aplicación funcione de manera idéntica en cualquier entorno, lo que es particularmente útil en desarrollo, pruebas y despliegue.
 
@@ -313,10 +336,11 @@ docker run --rm java-hello-world
 docker rmi java-hello-world
 ```
 
+::::
+::::{tab-item} Google Colab
 
-#### Google Colab (Opcional)
-
-##### Ejecutando CLI
+`````{tab-set}
+````{tab-item} Línea de Comandos (CLI)
 
 **Paso 1:** Preparar Google Colab para Java.
 - Google Colab está diseñado principalmente para Python, pero también puedes ejecutar código Java en él utilizando una configuración especial.
@@ -363,27 +387,16 @@ public class HelloWorld {
 
 - Verás "Hello World" impreso en la consola de salida de Colab.
 
-##### Instalando el Kernel de Java
+````
+````{tab-item} Kernel de Java
 
-Instala el kernel de Java copiando y pegando el siguiente código en la primera casilla
-
-```bash
-%%sh
-# Install java kernel
-wget -q https://github.com/SpencerPark/IJava/releases/download/v1.3.0/ijava-1.3.0.zip
-unzip -q ijava-1.3.0.zip
-python install.py
-
-# Install proxy for the java kernel
-wget -qO- https://gist.github.com/SpencerPark/e2732061ad19c1afa4a33a58cb8f18a9/archive/b6cff2bf09b6832344e576ea1e4731f0fb3df10c.tar.gz | tar xvz --strip-components=1
-python install_ipc_proxy_kernel.py --kernel=java --implementation=ipc_proxy_kernel.py
-```
+Instala el kernel de Java copiando y pegando el código de la sección de [Ejecucción en Google Colab](colabNotebook) en la primera casilla.
 
 Ahora conectate de forma local y después reinicia el kernel. Ya realizado este proceso no se debe repetir, si no podrías causar un error. 
 
 **Paso 1**
 
-<img src="../../images/colab1.png" width="90%" style="margin: auto;">
+<img src="../../images/colab1.png" width="90%" style="margin: 100 auto 0 auto;">
 
 **Paso 2**
 
@@ -395,6 +408,10 @@ Si todo esta correcto ahora debe aparecer conectado el notebook con dos barras v
 
 <img src="../../images/colab3.png" width=90%>
 
+````
+`````
+::::
+:::::
 
 ## Tipos de Variables
 

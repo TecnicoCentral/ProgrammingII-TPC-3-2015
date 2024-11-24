@@ -1,31 +1,33 @@
-# Programming II (Java)
+# Programming II
 
 [![Binder](https://mybinder.org/badge_logo.svg)](https://mybinder.org/v2/gh/uETITC/ProgrammingII-2024-2/main?labpath=Lessons)
+
+This course is taught in java programming language. It is part of the courses offered by [ETITC](https://etitc.edu.co/) for the systems engineering program. All courses are stored in the [uETITC](https://uetitc.github.io/) GitHub organization.
 
 ## Tabla de Contenido (ToC)
 
 ```{tableofcontents}
 ```
 
+(colabNotebook)=
 ## Executing Notebooks in Colab
 
 
 ::::{important}
-If you work from [Google Colab](https://colab.research.google.com/) **you must** execute the following code block in every notebook, at beginning. Remember that the tutorial on how to configure the environment can be found in the first tutorial: [1. Intruduction To Java](https://github.com/uETITC/ProgrammingII-2024-2/blob/main/Lessons/1.%20IntroductionToJava.md#instalando-el-kernel-de-java). There are several ways and Google Colab is one of them.
+If you are working in [Google Colab](https://colab.research.google.com/) **you must** execute the following code block in every notebook, before executing any cell. Remember that the tutorial on how to configure the environment can be found at: [1. Intruduction To Java](https://github.com/uETITC/ProgrammingII-2024-2/blob/main/Lessons/1.%20IntroductionToJava.md#instalando-el-kernel-de-java). There are several ways and Google Colab is one of them.
 
-  :::{code} python
-  :class: dropdown
-  %%sh
-  %%capture
-  # Install java kernel
-  wget -q https://github.com/SpencerPark/IJava/releases/download/v1.3.0/ijava-1.3.0.zip
-  unzip -q ijava-1.3.0.zip
-  python install.py
+:::{code} python
+%%sh
+%%capture
+# Install java kernel
+wget -q https://github.com/SpencerPark/IJava/releases/download/v1.3.0/ijava-1.3.0.zip
+unzip -q ijava-1.3.0.zip
+python install.py
 
-  # Install proxy for the java kernel
-  wget -qO- https://gist.github.com/SpencerPark/e2732061ad19c1afa4a33a58cb8f18a9/archive/b6cff2bf09b6832344e576ea1e4731f0fb3df10c.tar.gz | tar xvz --strip-components=1
-  python install_ipc_proxy_kernel.py --kernel=java --implementation=ipc_proxy_kernel.py
-  :::
+# Install proxy for the java kernel
+wget -qO- https://gist.github.com/SpencerPark/e2732061ad19c1afa4a33a58cb8f18a9/archive/b6cff2bf09b6832344e576ea1e4731f0fb3df10c.tar.gz | tar xvz --strip-components=1
+python install_ipc_proxy_kernel.py --kernel=java --implementation=ipc_proxy_kernel.py
+:::
   
 ::::
 
@@ -49,50 +51,95 @@ At the end of the course the student will be able to:
 
 ## Grades
 
+### Periods
+
+For all periods the grade is divided as {numref}`gradesPeriod`. The first and second periods are 35% of the final grade, while for the last period is 30%. All exams consists of two tests: one practical (60%) and the other theoretical (40%). 
+
 ::::{grid}
-:gutter: 2
 
 :::{grid-item}
-```{list-table} Exams dates.
+:margin: auto auto 0 0
+:columns: 5
+```{list-table} Exams.
 :header-rows: 1
-:name: exams
+:name: examsDates
 
 * - **Period**
-  - **Date**
+  - **Porcentage**
+  - **Exam Date**
 * - First
+  - 35%
   - 12/09/2024
 * - Second
+  - 35%
   - 24/10/2024
 * - Final
+  - 30%
   - 28/11/2024
 ```
 :::
 :::{grid-item}
 :margin: auto auto 0 0 
-```{list-table} Project deliveries dates.
+:columns: 7
+```{list-table} Grades per period.
 :header-rows: 1
-:name: proeject
+:name: gradesPeriod
 
-* - **Presentation**
-  - **Date**
+* - **Grade**
   - **Porcentage**
-* - First
-  - 16/09/2024
-  - 10 %
-* - Second
-  - 17/11/2024
-  - 10 %
-* - Final
-  - 02/12/2024
-  - 80 %
+* - Self-Evaluation
+  - 10%
+* - Co-Evaluation
+  - 10%
+* - Workshops / Project 
+  - 40%
+* - Exam (Theoretical - Practical)
+  - 40%  (40% - 60%)
+
 ```
+
 :::
 ::::
 
+### Project 
 
-For all periods the grade is divided into: Co-evaluation (10 %), self-evaluation (10 %), and teacher evaluation (80 %) which is divided into exams (30 %) and assignments (50 %). The first and second periods are 35 % of the final grade, while for the last period it is 30 %. In the first and second periods the exam consists of two tests: one practical (60 %) and the other theoretical (40 %). 
 
-The project is divide in two grades: first report (20 %) and last (80 %) assignment.
+::::{grid} 
+:gutter: 1
+:::{grid-item}
+:margin: auto auto 0 0 
+```{list-table} Grades for project.
+:header-rows: 1
+:name: projectGrades
+
+
+* - **Grade**
+  - **Porcentage**
+  - **Date**
+* - 1st Delivery
+  - 10%
+  - 16/09/2024
+* - 2st Delivery
+  - 10%
+  - 17/11/2024
+* - Solution
+  - 40%
+  - 02/12/2024
+* - GitHub
+  - 30%
+  - 02/12/2024
+* - Presentation
+  - 10%
+  - 02/12/2024
+
+```
+
+:::
+::::
+
+## Assigments
+
+All assignments will be stored on [GitHub](https://github.com/), but **must** be uploaded for grading on [Campus Virtual](https://campusvirtualpes.etitc.edu.co/Edusuperior/). 
 
 :::{tip}
 You can practice and complement the course by solving programming problems in any of the following pages:
@@ -103,10 +150,6 @@ You can practice and complement the course by solving programming problems in an
 
 Each solved problem, which has passed all the tests created for the page, can be exchanged for points. Very simple problems are not valid.
 :::
-
-## Assigments
-
-All assignments will be stored on [GitHub](https://github.com/) but will be uploaded for grading on [Campus Virtual](https://campusvirtualpes.etitc.edu.co/Edusuperior/). 
 
 ## Projects
 
@@ -181,5 +224,5 @@ All assignments will be stored on [GitHub](https://github.com/) but will be uplo
 ```
 
 :::{important}
-You can find all reference in the Google Drive folder [References](https://itceduco-my.sharepoint.com/:f:/g/personal/saguileran_itc_edu_co/Eledh23Sd41CnWAnmM3jALkBNHxwDXfiZ4CcmnRTa_ST3Q?e=Z1qPlS).
+You can find all references in the Google Drive folder [References](https://itceduco-my.sharepoint.com/:f:/g/personal/saguileran_itc_edu_co/Eledh23Sd41CnWAnmM3jALkBNHxwDXfiZ4CcmnRTa_ST3Q?e=Z1qPlS), to get acces you must enter with the institutional email.
 :::
