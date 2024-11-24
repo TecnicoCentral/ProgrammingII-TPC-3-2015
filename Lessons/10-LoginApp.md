@@ -120,7 +120,7 @@ Crea un proyecto en tu IDE con la siguiente estructura:
 ::::{grid}
 
 :::{grid-item}
-:margin: auto auto 0 0
+:margin: 0 0 0 0
 :columns: 7
 
 ```

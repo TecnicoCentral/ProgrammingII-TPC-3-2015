@@ -53,8 +53,8 @@ parts:
     chapters:
     - file: Lessons/Exams/First/First.md
       sections:
-      - file: Lessons/Exams/First/V1-sol.ipynb
-      - file: Lessons/Exams/First/V2-sol.ipynb
+      - file: Lessons/Exams/First/V1.ipynb
+      - file: Lessons/Exams/First/V2.ipynb
       
     - file: Lessons/Exams/Second/Second.md
       sections:

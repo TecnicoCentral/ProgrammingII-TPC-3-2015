@@ -49,7 +49,7 @@ Este ejemplo es basado en el siguiente tutorial:
 </div>
 
 :::{note}
-Puedes encontrar el código del vídeo, consulta de clima, en [WeatherAPIData.java](WeatherAPIData.java).
+Puedes encontrar el código del vídeo, consulta de clima, en el ejemplo [Geoposición y Clima](wheterAPI).
 :::
 
 ## Ejercicio
