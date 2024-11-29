@@ -52,10 +52,12 @@ jobs:
         # mysql password: "$123456789" # Required if "mysql user" exists. The password for the "mysql user"
     - name: Wait for MySQL
       run: |
-        echo -e "[client]\nuser = "root"\npassword = "$123456789"\nhost = "127.0.0.1"" >> config.cnf
-        while ! mysql --defaults-extra-file=config.cnf ; do
-          sleep 1
-        done
+        sleep 30
+        sudo service mysql start 
+      # echo -e "[client]\nuser = "root"\npassword = "$123456789"\nhost = "127.0.0.1"" >> config.cnf
+      # while ! mysql --defaults-extra-file=config.cnf ; do
+      #   sleep 1
+      # done
   # - name: Shutdown Ubuntu MySQL (SUDO)
     #   run: sudo service mysql start
     # - name: Create user
