@@ -1,4 +1,4 @@
-# Primer Parcial
+# 1. POO y Conceptos Básicos
 
 ## Instrucciones
 

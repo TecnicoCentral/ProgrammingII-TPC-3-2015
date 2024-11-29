@@ -12,6 +12,7 @@ parts:
     - file: Lessons/01-IntroductionToJava.md 
       sections:
       - file: Lessons/01-IntroductionToJava_Solution.ipynb
+    - file: Lessons/01-Tools.md
   - caption: "Fundamentos"
     chapters:
     - file: Lessons/02-OOP_Fundamentals_I.ipynb
@@ -60,6 +61,10 @@ parts:
       sections:
         - file: Lessons/Exams/Second/V1.md
         - file: Lessons/Exams/Second/V2.md
+    - file: Lessons/Exams/Third/Third.md
+      # sections:
+      #   - file: Lessons/Exams/Third/V1.md
+      #   - file: Lessons/Exams/Third/V2.md
   - caption: "Proyecto"
     chapters:
       - file: Lessons/ProjectGuideLines.md

@@ -300,6 +300,60 @@ Para ejecutar algo antes de inidicar la ventana debe agregarse antes de `launch(
 Un proyecto puede tener varias vistas, varios archivos fxml, y cada vista debe tener su respectivo controlador. Para cambiar entre vistas basta con crear un método que se ejecute al presionar un botón, un evento. El método del controlador debe ejecutar `App.setRoot("VistaNombre")`, además de importar la clase `com.App`.
 :::
 
+## Posibles Errores
+
+Si te sale el siguiente error
+
+```bash
+Exception in Application start method
+java.lang.reflect.InvocationTargetException
+        at java.base/jdk.internal.reflect.DirectMethodHandleAccessor.invoke(DirectMethodHandleAccessor.java:118)
+        at java.base/java.lang.reflect.Method.invoke(Method.java:580)
+        at javafx.graphics@23.0.1/com.sun.javafx.application.LauncherImpl.launchApplicationWithArgs(LauncherImpl.java:464)
+        at javafx.graphics@23.0.1/com.sun.javafx.application.LauncherImpl.launchApplication(LauncherImpl.java:364)
+        at java.base/jdk.internal.reflect.DirectMethodHandleAccessor.invoke(DirectMethodHandleAccessor.java:103)
+        at java.base/java.lang.reflect.Method.invoke(Method.java:580)
+        at java.base/sun.launcher.LauncherHelper$FXHelper.main(LauncherHelper.java:1164)
+Caused by: java.lang.RuntimeException: Exception in Application start method
+        at javafx.graphics@23.0.1/com.sun.javafx.application.LauncherImpl.launchApplication1(LauncherImpl.java:893)
+        at javafx.graphics@23.0.1/com.sun.javafx.application.LauncherImpl.lambda$launchApplication$2(LauncherImpl.java:196)
+        at java.base/java.lang.Thread.run(Thread.java:1575)
+Caused by: javafx.fxml.LoadException: 
+/home/saguileran/Downloads/fx/app_proyect/target/classes/com/interfaz.fxml:49
+
+        at javafx.fxml@23.0.1/javafx.fxml.FXMLLoader.constructLoadException(FXMLLoader.java:2727)
+        at javafx.fxml@23.0.1/javafx.fxml.FXMLLoader$ValueElement.processAttribute(FXMLLoader.java:935)
+        at javafx.fxml@23.0.1/javafx.fxml.FXMLLoader$RootElement.processAttribute(FXMLLoader.java:1307)
+        at javafx.fxml@23.0.1/javafx.fxml.FXMLLoader$Element.processStartElement(FXMLLoader.java:230)
+        at javafx.fxml@23.0.1/javafx.fxml.FXMLLoader$ValueElement.processStartElement(FXMLLoader.java:757)
+        at javafx.fxml@23.0.1/javafx.fxml.FXMLLoader.processStartElement(FXMLLoader.java:2858)
+        at javafx.fxml@23.0.1/javafx.fxml.FXMLLoader.loadImpl(FXMLLoader.java:2654)
+        at javafx.fxml@23.0.1/javafx.fxml.FXMLLoader.loadImpl(FXMLLoader.java:2568)
+        at javafx.fxml@23.0.1/javafx.fxml.FXMLLoader.load(FXMLLoader.java:2536)
+        at com.App.loadFXML(App.java:29)
+        at com.App.start(App.java:18)
+        at javafx.graphics@23.0.1/com.sun.javafx.application.LauncherImpl.lambda$launchApplication1$9(LauncherImpl.java:839)
+        at javafx.graphics@23.0.1/com.sun.javafx.application.PlatformImpl.lambda$runAndWait$12(PlatformImpl.java:483)
+        at javafx.graphics@23.0.1/com.sun.javafx.application.PlatformImpl.lambda$runLater$10(PlatformImpl.java:456)
+        at java.base/java.security.AccessController.doPrivileged(AccessController.java:400)
+        at javafx.graphics@23.0.1/com.sun.javafx.application.PlatformImpl.lambda$runLater$11(PlatformImpl.java:455)
+        at javafx.graphics@23.0.1/com.sun.glass.ui.InvokeLaterDispatcher$Future.run(InvokeLaterDispatcher.java:95)
+        at javafx.graphics@23.0.1/com.sun.glass.ui.gtk.GtkApplication._runLoop(Native Method)
+        at javafx.graphics@23.0.1/com.sun.glass.ui.gtk.GtkApplication.lambda$runLoop$10(GtkApplication.java:264)
+        ... 1 more
+Caused by: java.lang.ClassNotFoundException: com.PrimaryController
+        at java.base/jdk.internal.loader.BuiltinClassLoader.loadClass(BuiltinClassLoader.java:641)
+        at java.base/jdk.internal.loader.ClassLoaders$AppClassLoader.loadClass(ClassLoaders.java:188)
+        at java.base/java.lang.ClassLoader.loadClass(ClassLoader.java:528)
+        at javafx.fxml@23.0.1/javafx.fxml.FXMLLoader$ValueElement.processAttribute(FXMLLoader.java:933)
+        ... 18 more
+Exception running application com.App
+```
+
+El error proviene del archivo fxml creado por el constructor de escenario, seguramente es por dar a la casilla `Use fx:root constructor` que modifica el archivo fxml colocando las etiquetas `<fx:root...` en vez de `<VBox` que es el fondo del canvas, **NO se debe dar click** porque desconfigura el archivo.
+
+El otro error que puede salir viene del nombre de la clase que se debe colocar en **Scene Builder**, recuerden que debe ser la dirección relativa al proyecto, es decir, la dirección que le sigue a la carpeta `proyecto/src/main/java/`, respetando el orden de los paquetes algo como `paquete/subpaquete/subsubpaquete/controlador`.
+
 ## Conclusión
 
 Este taller te permite aprender a diseñar una interfaz funcional con **JavaFX**, aplicar el patrón **MVC**, y conectar tu aplicación a una **base de datos**. Practicarás tanto el diseño visual como la lógica detrás de una aplicación profesional.
