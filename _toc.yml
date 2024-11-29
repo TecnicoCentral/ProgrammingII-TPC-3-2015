@@ -18,6 +18,7 @@ parts:
       sections:
       - file: Lessons/02-OOP_Fundamentals_Solution.ipynb
     - file: Lessons/03-OOP_Fundamentals_II.ipynb
+    - file: Lessons/02-DataStructures.md 
   - caption: "Diseño y Modelado"
     chapters:
     - file: Lessons/04-UML.md
@@ -37,12 +38,11 @@ parts:
     - file: Lessons/07-Archivos.ipynb
     - file: Lessons/07-Serializable.ipynb
     - file: Lessons/07-FilesSerializationWorkshop.md
-  - caption: "Bases de Datos (DB)"
+  - caption: "Bases de Datos"
     chapters:
     - file: Lessons/08-DataBases_Types.md
     - file: Lessons/08-MySQL-Installation.md
-    - file: Lessons/08-DataBases.md
-    - file: Lessons/08-DataBases1.ipynb
+    - file: Lessons/08-DataBases.ipynb
     - file: Lessons/09-DB-Workshop.md
   - caption: "JavaFX"
     chapters:

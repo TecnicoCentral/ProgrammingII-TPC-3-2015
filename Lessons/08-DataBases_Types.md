@@ -1,4 +1,4 @@
-# Introducción y Clasificación
+# Definición y Tipos
 
 ## Objetivos
 
