@@ -54,6 +54,9 @@ jobs:
       run: |
         sleep 30
         sudo service mysql start 
+        echo -e "[client]\nuser = "root"\npassword = "$123456789"\nhost = "127.0.0.1"" >> config.cnf
+        sudo mysql --defaults-extra-file=config.cnf
+        exit
       # echo -e "[client]\nuser = "root"\npassword = "$123456789"\nhost = "127.0.0.1"" >> config.cnf
       # while ! mysql --defaults-extra-file=config.cnf ; do
       #   sleep 1
