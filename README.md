@@ -110,7 +110,8 @@ For all periods the grade is divided as {numref}`gradesPeriod`. The first and se
 :margin: auto auto 0 0 
 ```{list-table} Grades for project.
 :header-rows: 1
-:name: projectGrades
+:width: 50%
+:name: projectGrades 
 
 
 * - **Grade**
@@ -139,7 +140,7 @@ For all periods the grade is divided as {numref}`gradesPeriod`. The first and se
 
 ## Assigments
 
-All assignments will be stored on [GitHub](https://github.com/), but **must** be uploaded for grading on [Campus Virtual](https://campusvirtualpes.etitc.edu.co/Edusuperior/). 
+All assignments will be stored on [GitHub](https://github.com/), but **must** be uploaded for grading on the [Virtual Campus](https://campusvirtualpes.etitc.edu.co/Edusuperior/). 
 
 :::{tip}
 You can practice and complement the course by solving programming problems in any of the following pages:
