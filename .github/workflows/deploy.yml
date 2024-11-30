@@ -34,35 +34,45 @@ jobs:
     - name: Install dependencies
       run: |
         pip install -r requirements.txt
-    # - name: actions-setup-mysql
-    #   uses: shogo82148/actions-setup-mysql@v1.39.2 
-    #   with:
-    #     auto-start: true
-    #     mysql-version: "9.0"
-    #     root-password: "$123456789"
-    #     user: "dba"
-    #     password: "$123456789"
-    # - name: CreateDatabase
-    #   run: |
-    #     mysql -uroot -e 'CREATE DATABASE IF NOT EXISTS Universidad;'
+    
+    - name: Setup MySQL
+      uses: shogo82148/actions-setup-mysql@v1.16.0
+      with:
+        auto-start: true
+        distribution: 'mysql'
+        mysql-version: '8.0'
+        # it is "my-cnf" not "my-conf"
+        my-cnf: |
+          default-authentication-plugin=mysql_native_password
+          sync_binlog=0
+          innodb_doublewrite=OFF
+          innodb-flush-log-at-trx-commit=0
+          innodb-flush-method=nosync
+        user: dba
+        root-password: ${{ secrets.MYSQL_PASSWORD }}
+        password: ${{ secrets.MYSQL_PASSWORD }}
+    
+    - name: Create database
+      run: mysql -uroot -proot --socket ${{ steps.mysql.outputs.base-dir }}/tmp/mysql.sock -e 'CREATE DATABASE IF NOT EXISTS Universidad;'
+        
       # run: |
       #   sudo mysql -uroot -p${{ secrets.MYSQL_PASSWORD }} -e 'CREATE DATABASE IF NOT EXISTS Universidad;'
 
-    - name: Shutdown Ubuntu MySQL (SUDO)
-      run: sudo service mysql stop # Shutdown the Default MySQL, "sudo" is necessary, please not remove it
+    # - name: Shutdown Ubuntu MySQL (SUDO)
+    #   run: sudo service mysql stop # Shutdown the Default MySQL, "sudo" is necessary, please not remove it
     
-    - name: Setup MySQL
-      uses: mirromutth/mysql-action@v1.1
-      with:
-        host port: 3306 # Optional, default value is 3306. The port of host
-        container port: 3306 # Optional, default value is 3306. The port of container
-        character set server: 'utf8mb4' # Optional, default value is 'utf8mb4'. The '--character-set-server' option for mysqld
-        collation server: 'utf8_general_ci' # Optional, default value is 'utf8mb4_general_ci'. The '--collation-server' option for mysqld
-        mysql version: 'latest' # Optional, default value is "latest". The version of the MySQL
-        mysql database: 'Universidad' # Optional, default value is "test". The specified database which will be create
-        mysql root password: "$123456789" # Required if "mysql user" is empty, default is empty. The root superuser password
-        mysql user: 'dba' # Required if "mysql root password" is empty, default is empty. The superuser for the specified database. Can use secrets, too
-        mysql password: "$123456789" # Required if "mysql user" exists. The password for the "mysql user"
+    # - name: Setup MySQL
+    #   uses: mirromutth/mysql-action@v1.1
+    #   with:
+    #     host port: 3306 # Optional, default value is 3306. The port of host
+    #     container port: 3306 # Optional, default value is 3306. The port of container
+    #     character set server: 'utf8mb4' # Optional, default value is 'utf8mb4'. The '--character-set-server' option for mysqld
+    #     collation server: 'utf8_general_ci' # Optional, default value is 'utf8mb4_general_ci'. The '--collation-server' option for mysqld
+    #     mysql version: 'latest' # Optional, default value is "latest". The version of the MySQL
+    #     mysql database: 'Universidad' # Optional, default value is "test". The specified database which will be create
+    #     mysql root password: "$123456789" # Required if "mysql user" is empty, default is empty. The root superuser password
+    #     mysql user: 'dba' # Required if "mysql root password" is empty, default is empty. The superuser for the specified database. Can use secrets, too
+    #     mysql password: "$123456789" # Required if "mysql user" exists. The password for the "mysql user"
     # - name: Wait for MySQL
     #   run: |
     #     sleep 30
