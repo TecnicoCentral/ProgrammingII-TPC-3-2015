@@ -45,7 +45,7 @@ jobs:
         user: "dba"
         password: "$123456789"
     - name: CreateDatabase
-      run: sudo mysql -uroot \
+      run: mysql -uroot \
           --protocol=SOCKET \
           --socket=${{ steps.setup-mysql.outputs.base-dir }}/tmp/mysql.sock
           -e 'CREATE DATABASE IF NOT EXISTS Universidad;'
