@@ -45,7 +45,7 @@ jobs:
         root-password: "$123456789"
         user: "dba"
         password: "$123456789"
-    - run: mysql -uroot -e 'SELECT version()'
+    #- run: mysql -uroot -p$123456789 -e 'SELECT version()'
     # - name: Setup MySQL
     #   uses: mirromutth/mysql-action@v1.1
     #   with:
