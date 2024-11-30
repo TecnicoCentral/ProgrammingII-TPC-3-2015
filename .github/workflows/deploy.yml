@@ -42,11 +42,10 @@ jobs:
         distribution: 'mysql'
         mysql-version: '9.0'
         user: dba
-        host port: 3889
         root-password: "root"
         password: ${{ secrets.MYSQL_PASSWORD }}
     - name: Creating database
-      run: mysql -u root -P 3889 -e 'SELECT version()'
+      run: mysql -u root -e 'SELECT version()'
     # - name: connect via unix domain socket
     #   run: mysql -uroot \
     #     --protocol=SOCKET \
