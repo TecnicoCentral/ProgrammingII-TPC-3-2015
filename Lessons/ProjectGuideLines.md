@@ -1,7 +1,7 @@
 # Guía
 
 :::{warning}
-El proyecto debe estar en [GitHub](https://www.github.com) y todos los integrantes del grupo deben participar activamente. La calificación será proporcional a la participación.
+El proyecto debe estar en [GitHub](https://www.github.com) y todos los integrantes del grupo deben participar activamente. La calificación será proporcional a la participación. Como es almacenado en GitHub se debe escribir utilizando markdown.
 :::
 
 ## 1. Objetivo del Proyecto
