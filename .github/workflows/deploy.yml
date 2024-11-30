@@ -41,8 +41,8 @@ jobs:
         mysql-version: "9.0"
         user: "dba"
         password: ${{ secrets.MYSQL_PASSWORD }}
-    - name: connect via unix domain socket
-      run: mysql -uroot -e 'CREATE TABLE IF NOT EXISTS Universidad;'
+    - name: Creating database
+      run: mysql -uroot -e 'CREATE DATABASE Universidad;'
     
       # run: mysql -uroot \
       #     --protocol=SOCKET \
