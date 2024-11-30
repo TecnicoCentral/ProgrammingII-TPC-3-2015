@@ -41,11 +41,11 @@ jobs:
       with:
         auto-start: true
         mysql-version: "9.0"
-        root-password: ${{ secrets.MYSQL_PASSWORD }}
+        root-password: "$123456789"
         user: "dba"
-        password: ${{ secrets.MYSQL_PASSWORD }}
+        password: "$123456789"
     - name: CreateDatabase
-      run: mysql -uroot -p${{ secrets.MYSQL_PASSWORD }} -e 'CREATE DATABASE IF NOT EXISTS Universidad;'
+      run: mysql -uroot -p$123456789 -e 'CREATE DATABASE IF NOT EXISTS Universidad;'
     
     # - name: Setup MySQL
     #   uses: mirromutth/mysql-action@v1.1
