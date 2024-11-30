@@ -39,8 +39,10 @@ jobs:
       uses: shogo82148/actions-setup-mysql@v1.39.2
       with:
         mysql-version: "9.0"
+        user: "dba"
+        password: ${{ secrets.MYSQL_PASSWORD }}
     - name: connect via unix domain socket
-      run: mysql -uroot -e 'SELECT version()'
+      run: mysql -uroot -e 'CREATE TABLE IF NOT EXISTS Universidad;'
     
       # run: mysql -uroot \
       #     --protocol=SOCKET \
