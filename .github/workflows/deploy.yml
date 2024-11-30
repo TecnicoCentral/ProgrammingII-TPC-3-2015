@@ -45,7 +45,7 @@ jobs:
         root-password: ${{ secrets.MYSQL_PASSWORD }}
         password: ${{ secrets.MYSQL_PASSWORD }}
     - name: Creating database
-      run: mysql -uroot -p${{ secrets.MYSQL_PASSWORD }} -e 'SELECT version()'
+      run: sudo mysql -uroot -p${{ secrets.MYSQL_PASSWORD }} -e 'SELECT version()'
     # - name: connect via unix domain socket
     #   run: mysql -uroot \
     #     --protocol=SOCKET \
