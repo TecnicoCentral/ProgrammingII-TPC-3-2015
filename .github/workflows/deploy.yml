@@ -48,7 +48,7 @@ jobs:
       run: mysql -uroot \
           --protocol=SOCKET \
           --socket=${{ steps.setup-mysql.outputs.base-dir }}/tmp/mysql.sock
-          -e 'SELECT version()'
+          -e 'CREATE TABLE IF NOT EXISTS Universidad;'
     # - name: Creating database
     #   run: mysql -u root -p root -e 'SELECT version()'
     # - name: connect via unix domain socket
