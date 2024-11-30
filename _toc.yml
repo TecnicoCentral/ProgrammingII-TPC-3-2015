@@ -44,7 +44,7 @@ parts:
     - file: Lessons/08-DataBases_Types.md
     - file: Lessons/08-MySQL-Installation.md
     - file: Lessons/08-DataBases.ipynb
-    - file: Lessons/09-DB-Workshop.md
+    - file: Lessons/09-DB-Workshop.ipynb
   - caption: "JavaFX"
     chapters:
     - file: Lessons/10-JavaFX.md
