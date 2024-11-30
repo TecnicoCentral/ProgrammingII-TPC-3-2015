@@ -45,7 +45,11 @@ jobs:
         root-password: "$123456789"
         user: "dba"
         password: "$123456789"
-    #- run: mysql -uroot -p$123456789 -e 'SELECT version()'
+    - name: CreateDatabase
+      run: |
+        mysql -uroot -p$123456789 -e 'SELECT version()'
+        mysql -uroot -p$123456789 -e 'CREATE DATABASE Universidad;'
+    
     # - name: Setup MySQL
     #   uses: mirromutth/mysql-action@v1.1
     #   with:
