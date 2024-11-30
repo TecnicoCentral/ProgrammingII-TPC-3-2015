@@ -36,11 +36,11 @@ jobs:
         pip install -r requirements.txt
     
     - name: Setup MySQL
-      uses: shogo82148/actions-setup-mysql@v1.16.0
+      uses: shogo82148/actions-setup-mysql@v1.39.2
       with:
         auto-start: true
         distribution: 'mysql'
-        mysql-version: '8.0'
+        mysql-version: '9.0'
         # it is "my-cnf" not "my-conf"
         my-cnf: |
           default-authentication-plugin=mysql_native_password
@@ -52,8 +52,13 @@ jobs:
         root-password: ${{ secrets.MYSQL_PASSWORD }}
         password: ${{ secrets.MYSQL_PASSWORD }}
     
-    - name: Create database
-      run: sudo mysql -uroot -proot --socket ${{ steps.mysql.outputs.base-dir }}/tmp/mysql.sock -e 'CREATE DATABASE IF NOT EXISTS Universidad;'
+    # - name: connect via unix domain socket
+    #   run: mysql -uroot \
+    #     --protocol=SOCKET \
+    #     --socket=${{ steps.setup-mysql.outputs.base-dir }}/tmp/mysql.sock
+    #     -e 'SELECT version()'
+        # - name: Create database
+    #   run: sudo mysql -uroot -proot --socket ${{ steps.setup-mysql.outputs.base-dir }}/tmp/mysql.sock -e 'CREATE DATABASE IF NOT EXISTS Universidad;'
         
       # run: |
       #   sudo mysql -uroot -p${{ secrets.MYSQL_PASSWORD }} -e 'CREATE DATABASE IF NOT EXISTS Universidad;'
