@@ -53,7 +53,7 @@ jobs:
         password: ${{ secrets.MYSQL_PASSWORD }}
     
     - name: Create database
-      run: mysql -uroot -proot -e 'CREATE DATABASE IF NOT EXISTS Universidad;'
+      run: sudo mysql -uroot -proot --socket ${{ steps.mysql.outputs.base-dir }}/tmp/mysql.sock -e 'CREATE DATABASE IF NOT EXISTS Universidad;'
         
       # run: |
       #   sudo mysql -uroot -p${{ secrets.MYSQL_PASSWORD }} -e 'CREATE DATABASE IF NOT EXISTS Universidad;'
