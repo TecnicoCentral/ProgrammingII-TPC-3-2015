@@ -38,17 +38,14 @@ jobs:
     - name: Setup MySQL
       uses: shogo82148/actions-setup-mysql@v1.39.2
       with:
-        auto-start: true
-        distribution: 'mysql'
-        mysql-version: '9.0'
-        user: dba
-        root-password: "root"
-        password: ${{ secrets.MYSQL_PASSWORD }}
+        mysql-version: "9.0"
     - name: connect via unix domain socket
-      run: mysql -uroot \
-          --protocol=SOCKET \
-          --socket=${{ steps.setup-mysql.outputs.base-dir }}/tmp/mysql.sock
-          -e 'CREATE TABLE IF NOT EXISTS Universidad;'
+      run: mysql -uroot -e 'SELECT version()'
+    
+      # run: mysql -uroot \
+      #     --protocol=SOCKET \
+      #     --socket=${{ steps.setup-mysql.outputs.base-dir }}/tmp/mysql.sock
+      #     -e 'CREATE TABLE IF NOT EXISTS Universidad;'
     # - name: Creating database
     #   run: mysql -u root -p root -e 'SELECT version()'
     # - name: connect via unix domain socket
