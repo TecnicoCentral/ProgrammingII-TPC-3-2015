@@ -34,8 +34,8 @@ jobs:
     - name: Install dependencies
       run: |
         pip install -r requirements.txt
-    - name: Shutdown Ubuntu MySQL (SUDO)
-      run: sudo service mysql stop # Shutdown the Default MySQL, "sudo" is necessary, please not remove it
+    # - name: Shutdown Ubuntu MySQL (SUDO)
+    #   run: sudo service mysql stop # Shutdown the Default MySQL, "sudo" is necessary, please not remove it
     - name: actions-setup-mysql
       uses: shogo82148/actions-setup-mysql@v1.39.2 
       with:
@@ -46,7 +46,7 @@ jobs:
         password: "$123456789"
     - name: CreateDatabase
       run: |
-        mysql -uroot -e 'CREATE DATABASE IF NOT EXISTS Universidad;'
+        sudo mysql -uroot -p${{ secrets.MYSQL_PASSWORD }} -e 'CREATE DATABASE IF NOT EXISTS Universidad;'
         
     # mysql -uroot --ssl --ssl-mode=REQUIRED --ssl-ca=${{ steps.setup-mysql.outputs.base-dir }}/var/ca.pem -e 'SELECT version()'
         
