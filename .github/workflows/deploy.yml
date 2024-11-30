@@ -48,7 +48,7 @@ jobs:
       run: sudo mysql -uroot \
           --protocol=SOCKET \
           --socket=${{ steps.setup-mysql.outputs.base-dir }}/tmp/mysql.sock
-          -e 'SELECT version()'
+          -e 'CREATE DATABASE IF NOT EXISTS Universidad;'
       # run: |
       #   sudo mysql -uroot -p${{ secrets.MYSQL_PASSWORD }} -e 'CREATE DATABASE IF NOT EXISTS Universidad;'
         
