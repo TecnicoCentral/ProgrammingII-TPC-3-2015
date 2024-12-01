@@ -7,14 +7,12 @@ ENV MYSQL_PASSWORD=$123465789
 ENV MYSQL_DATABASE=University
 
 # # Run the following commands to create the new user and grant them the necessary permissions
+RUN mysqld
 # RUN mysql -u root -p -h 127.0.0.1 -e "CREATE USER '$MYSQL_USER'@'%' IDENTIFIED BY '$MYSQL_PASSWORD';" 
 # RUN mysql -u root -p -h 127.0.0.1 -e "GRANT ALL PRIVILEGES ON $MYSQL_DATABASE.* TO '$MYSQL_USER'@'%';" 
 # RUN mysql -u root -p -h 127.0.0.1 -e "FLUSH PRIVILEGES;"
 
 # EXPOSE 3306
-
-CMD [ "mysqld" ]
-
 
 FROM eclipse-temurin:21-jdk-jammy
 

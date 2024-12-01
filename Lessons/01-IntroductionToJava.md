@@ -415,15 +415,21 @@ Si todo esta correcto ahora debe aparecer conectado el notebook con dos barras v
 
 ## Tipos de Variables
 
-<figure>
-  <img src="https://static.wikia.nocookie.net/java/images/0/0c/Variables.jpeg/revision/latest/scale-to-width-down/1000?cb=20141023145013" alt="Trulli" style="width:80%">
-  <figcaption><a href="https://java.fandom.com/wiki/Variables">Variables Java</a> </figcaption>
-</figure> 
+:::{figure} https://waytoeasylearn.com/storage/2024/05/What-is-Data-Structure-1024x744.png
+---
+width: 90%
+name: categorizacion
+---
+categorización de los tipos de varibales, Tomado de [What is Data Structure](https://waytoeasylearn.com/learn/what-is-data-structure/).
+:::
 
-<figure>
-  <img src="https://cdn.mindmajix.com/blog/images/java-03_0719.png" alt="Trulli" style="width:80%">
-  <figcaption><a href="https://mindmajix.com/data-types-in-java"> Data Types in java </a>  </figcaption>
-</figure> 
+:::{figure} https://static.wikia.nocookie.net/java/images/0/0c/Variables.jpeg/revision/latest/scale-to-width-down/1000?cb=20141023145013
+---
+width: 90%
+name: tiposvariables
+---
+Los tipos de datos primitivos dan contexto a las variables. Tomado de [Variables Java](https://uetitc.github.io/ProgrammingII-2024-2/Lessons/01-IntroductionToJava.html#tipos-de-variables).
+:::
 
 
 ## Conclusiones
