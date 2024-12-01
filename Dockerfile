@@ -1,25 +1,30 @@
 FROM mysql:latest
 
+# Set the working directory to /app
+WORKDIR /app
+
+# Copy the current directory contents into the container at /app
+ADD . /app
+
+# Set the default user for the MySQL image
 USER mysql
+
 # Set environment variables for the new user
 ENV MYSQL_USER=dba
 ENV MYSQL_PASSWORD=$123465789
 ENV MYSQL_DATABASE=University
 
-# # Run the following commands to create the new user and grant them the necessary permissions
-# RUN mysqld
-# RUN mysql -u root -p -h 127.0.0.1 -e "CREATE USER '$MYSQL_USER'@'%' IDENTIFIED BY '$MYSQL_PASSWORD';" 
-# RUN mysql -u root -p -h 127.0.0.1 -e "GRANT ALL PRIVILEGES ON $MYSQL_DATABASE.* TO '$MYSQL_USER'@'%';" 
-# RUN mysql -u root -p -h 127.0.0.1 -e "FLUSH PRIVILEGES;"
+# Run the following commands to create the new user and grant them the necessary permissions
+RUN mysql -u root -p -e "CREATE USER '$MYSQL_USER'@'%' IDENTIFIED BY '$MYSQL_PASSWORD';"
+RUN mysql -u root -p -e "GRANT ALL PRIVILEGES ON $MYSQL_DATABASE.* TO '$MYSQL_USER'@'%';"
+RUN mysql -u root -p -e "FLUSH PRIVILEGES;"
 
-#VOLUME ["/etc/mysql", "/var/lib/mysql"]
+# Expose port 3306 to allow connections to the database
+EXPOSE 3306
 
-RUN /bin/bash -c "/usr/bin/mysqld_safe --skip-grant-tables &" && \
-    sleep 5 && \
-    mysql -u root -e "CREATE DATABASE Universidad;" && \
-    mysql -u root -e "CREATE DATABASE licores_colombianos;" 
+# Start the MySQL server when the container is run
+CMD ["mysqld"]
 
-# EXPOSE 3306
 
 FROM eclipse-temurin:21-jdk-jammy
 
