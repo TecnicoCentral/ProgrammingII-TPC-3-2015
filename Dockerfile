@@ -1,6 +1,16 @@
-# FROM mysql:latest as mysql_image
+FROM mysql:latest as mysql_image
 
-# LABEL org.opencontainers.image.authors="saguileran@unal.edu.co"
+LABEL org.opencontainers.image.authors="saguileran@unal.edu.co"
+
+ENV MYSQL_DATABASE='University' \
+    MYSQL_USER='dba' \
+    MYSQL_PASSWORD='$12345678' \
+    MYSQL_ROOT_PASSWORD='$12345678'
+
+VOLUME my-db:/var/lib/mysql
+
+EXPOSE 3306
+
 
 
 FROM openjdk:21-jdk-slim as java_image
