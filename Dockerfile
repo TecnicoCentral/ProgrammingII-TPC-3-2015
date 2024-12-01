@@ -1,4 +1,11 @@
-FROM eclipse-temurin:21-jdk-jammy
+FROM mysql:latest
+
+LABEL org.opencontainers.image.authors="saguileran@unal.edu.co"
+
+EXPOSE 3306
+
+
+FROM openjdk:21-jdk-slim
 
 RUN apt update 
 RUN apt install -y python3-pip unzip
@@ -40,4 +47,4 @@ EXPOSE 3306
 # Launch the notebook server
 WORKDIR $HOME
 
-CMD ["jupyter", "notebook", "--ip", "0.0.0.0", "--no-browser"]
+CMD ["jupyter", "lab", "--ip", "0.0.0.0", "--no-browser"]
