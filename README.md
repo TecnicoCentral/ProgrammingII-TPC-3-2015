@@ -4,6 +4,8 @@
 
 This course is taught in java programming language. It is part of the courses offered by [ETITC](https://etitc.edu.co/) for the systems engineering program. All courses are stored in the [uETITC](https://uetitc.github.io/) GitHub organization.
 
+Some images are taken from the references {cite}`ydaniel,koffman,jamest`.
+
 ## Tabla de Contenido (ToC)
 
 ```{tableofcontents}
@@ -33,7 +35,6 @@ python install_ipc_proxy_kernel.py --kernel=java --implementation=ipc_proxy_kern
 
 ## Objective
 
-{cite}`ydaniel,koffman,jamest`.
 
 To train students in problem solving through object-oriented programming (OOP). Throughout the course, students will learn to apply advanced modular programming techniques, to reuse code through libraries and frameworks, and to develop complex solutions through debugging and logical reasoning processes.
 
