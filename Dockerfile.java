@@ -1,13 +1,13 @@
-FROM eclipse-temurin:21-jdk-jammy
+FROM openjdk:21-jdk-slim
 
 RUN apt update 
-RUN apt install -y python3-pip unzip
+RUN apt install -y python3-pip unzip curl
 
 # add requirements.txt, written this way to gracefully ignore a missing file
 COPY requirements.tx[t] .
 RUN ([ -f requirements.txt ] \
-    && pip3 install --no-cache-dir -r requirements.txt) \
-    || pip3 install --no-cache-dir jupyter jupyterlab
+    && pip3 install --no-cache-dir -r requirements.txt --break-system-packages) \
+    || pip3 install --no-cache-dir jupyter jupyterlab --break-system-packages
 
 USER root
 
@@ -34,10 +34,9 @@ RUN chown -R $NB_UID $HOME
 
 USER $NB_USER
 
-# Expose port 3306 to allow connections to the database
-EXPOSE 3306
-
 # Launch the notebook server
 WORKDIR $HOME
 
 CMD ["jupyter", "notebook", "--ip", "0.0.0.0", "--no-browser"]
+
+EXPOSE 8080

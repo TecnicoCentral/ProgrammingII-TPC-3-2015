@@ -1,0 +1,5 @@
+FROM mysql:latest
+
+LABEL org.opencontainers.image.authors="saguileran@unal.edu.co"
+
+EXPOSE 3306
