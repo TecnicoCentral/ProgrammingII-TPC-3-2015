@@ -23,7 +23,7 @@ RUN ([ -f requirements.txt ] \
     && pip3 install --no-cache-dir -r requirements.txt --break-system-packages) \
     || pip3 install --no-cache-dir jupyter jupyterlab --break-system-packages
 
-RUN mysql -u root -e 'SELECT() verison;' 
+#RUN mysql -u root -e 'SELECT() verison;' 
 USER root
 
 # Download the kernel release
