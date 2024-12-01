@@ -13,8 +13,8 @@ RUN apt install -y python3-pip unzip
 # add requirements.txt, written this way to gracefully ignore a missing file
 COPY requirements.tx[t] .
 RUN ([ -f requirements.txt ] \
-    && pip3 install --no-cache-dir -r requirements.txt) \
-    || pip3 install --no-cache-dir jupyter jupyterlab
+    && pip3 install --no-cache-dir -r requirements.txt --break-system-packages) \
+    || pip3 install --no-cache-dir jupyter jupyterlab --break-system-packages
 
 USER root
 
