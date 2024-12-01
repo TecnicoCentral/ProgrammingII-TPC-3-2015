@@ -8,7 +8,7 @@ EXPOSE 3306
 FROM openjdk:21-jdk-slim
 
 RUN apt update 
-RUN apt install -y python3-pip unzip
+RUN apt install -y python3-pip unzip curl
 
 # add requirements.txt, written this way to gracefully ignore a missing file
 COPY requirements.tx[t] .
