@@ -2,12 +2,6 @@
 
 # LABEL org.opencontainers.image.authors="saguileran@unal.edu.co"
 
-# ENV MYSQL_DATABASE=Universidad\
-#     MYSQL_USER=dba\
-#     MYSQL_PASSWORD=$123456789\
-#     MYSQL_ROOT_PASSWORD=$123456789
-
-# CMD ["mysql", "-u","root","-e","'SHOW DATABASES;'" ] 
 
 FROM openjdk:21-jdk-slim as java_image
 
@@ -15,7 +9,6 @@ LABEL org.opencontainers.image.authors="saguileran@unal.edu.co"
 
 RUN apt update 
 RUN apt install -y python3-pip unzip curl
-#RUN apt install -y mysql-server
 
 # add requirements.txt, written this way to gracefully ignore a missing file
 COPY requirements.tx[t] .
@@ -23,7 +16,6 @@ RUN ([ -f requirements.txt ] \
     && pip3 install --no-cache-dir -r requirements.txt --break-system-packages) \
     || pip3 install --no-cache-dir jupyter jupyterlab --break-system-packages
 
-#RUN mysql -u root -e 'SELECT() verison;' 
 USER root
 
 # Download the kernel release
