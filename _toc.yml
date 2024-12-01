@@ -19,7 +19,7 @@ parts:
       sections:
       - file: Lessons/02-OOP_Fundamentals_Solution.ipynb
     - file: Lessons/03-OOP_Fundamentals_II.ipynb
-    - file: Lessons/02-DataStructures.md 
+    - file: Lessons/02-DataStructures.ipynb 
   - caption: "Diseño y Modelado"
     chapters:
     - file: Lessons/04-UML.md
