@@ -4,7 +4,7 @@
 
 This course is taught in java programming language. It is part of the courses offered by [ETITC](https://etitc.edu.co/) for the systems engineering program. All courses are stored in the [uETITC](https://uetitc.github.io/) GitHub organization.
 
-Some images are taken from the references {cite}`ydaniel,koffman,jamest`.
+Images are taken from the references {cite}`ydaniel,koffman,jamest`.
 
 ## Tabla de Contenido (ToC)
 

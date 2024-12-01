@@ -2,7 +2,13 @@ FROM mysql:latest
 
 LABEL org.opencontainers.image.authors="saguileran@unal.edu.co"
 
+ENV MYSQL_DATABASE=Universidad\
+    MYSQL_USER=dba\
+    MYSQL_PASSWORD=$123456789\
+    MYSQL_ROOT_PASSWORD=$123456789
+
 EXPOSE 3306
+
 
 
 FROM openjdk:21-jdk-slim
