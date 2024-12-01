@@ -1,4 +1,4 @@
-# FROM mysql:latest
+# FROM mysql:latest as mysql_image
 
 # LABEL org.opencontainers.image.authors="saguileran@unal.edu.co"
 
@@ -7,15 +7,15 @@
 #     MYSQL_PASSWORD=$123456789\
 #     MYSQL_ROOT_PASSWORD=$123456789
 
+# CMD ["mysql", "-u","root","-e","'SHOW DATABASES;'" ] 
 
-
-FROM openjdk:21-jdk-slim
+FROM openjdk:21-jdk-slim as java_image
 
 LABEL org.opencontainers.image.authors="saguileran@unal.edu.co"
 
 RUN apt update 
 RUN apt install -y python3-pip unzip curl
-RUN apt install -y mysql-server
+#RUN apt install -y mysql-server
 
 # add requirements.txt, written this way to gracefully ignore a missing file
 COPY requirements.tx[t] .
@@ -49,8 +49,8 @@ RUN chown -R $NB_UID $HOME
 
 USER $NB_USER
 
-# Expose port 3306 to allow connections to the database
-EXPOSE 3306
+# # Expose port 3306 to allow connections to the database
+# EXPOSE 3306
 
 # Launch the notebook server
 WORKDIR $HOME
