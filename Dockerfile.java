@@ -19,6 +19,11 @@ RUN unzip ijava-kernel.zip -d ijava-kernel \
     && cd ijava-kernel \
     && python3 install.py --sys-prefix
 
+# Set up the user environment
+ENV NB_USER=saguileran\
+    NB_UID=1000\
+    HOME=/home/$NB_USER
+
 RUN adduser --disabled-password \
     --gecos "Default user" \
     --uid $NB_UID \
