@@ -1,29 +1,29 @@
-FROM mysql:latest
+# FROM mysql:latest
 
-# Set the working directory to /app
-WORKDIR /app
+# # Set the working directory to /app
+# WORKDIR /app
 
-# Copy the current directory contents into the container at /app
-ADD . /app
+# # Copy the current directory contents into the container at /app
+# ADD . /app
 
-# Set the default user for the MySQL image
-USER mysql
+# # Set the default user for the MySQL image
+# USER mysql
 
-# Set environment variables for the new user
-ENV MYSQL_USER=dba
-ENV MYSQL_PASSWORD=$123465789
-ENV MYSQL_DATABASE=University
+# # Set environment variables for the new user
+# ENV MYSQL_USER=dba
+# ENV MYSQL_PASSWORD=$123465789
+# ENV MYSQL_DATABASE=University
 
-# Run the following commands to create the new user and grant them the necessary permissions
-RUN mysql -h 0.0.0.0 -P 3306 -u root -p -e "CREATE USER '$MYSQL_USER'@'%' IDENTIFIED BY '$MYSQL_PASSWORD';"
-RUN mysql -h 0.0.0.0 -P 3306 -u root -p -e "GRANT ALL PRIVILEGES ON $MYSQL_DATABASE.* TO '$MYSQL_USER'@'%';"
-RUN mysql -h 0.0.0.0 -P 3306 -u root -p -e "FLUSH PRIVILEGES;"
+# # Run the following commands to create the new user and grant them the necessary permissions
+# RUN mysql -h 0.0.0.0 -P 3306 -u root -p -e "CREATE USER '$MYSQL_USER'@'%' IDENTIFIED BY '$MYSQL_PASSWORD';"
+# RUN mysql -h 0.0.0.0 -P 3306 -u root -p -e "GRANT ALL PRIVILEGES ON $MYSQL_DATABASE.* TO '$MYSQL_USER'@'%';"
+# RUN mysql -h 0.0.0.0 -P 3306 -u root -p -e "FLUSH PRIVILEGES;"
 
-# Expose port 3306 to allow connections to the database
-EXPOSE 3306
+# # Expose port 3306 to allow connections to the database
+# EXPOSE 3306
 
-# Start the MySQL server when the container is run
-CMD ["mysqld"]
+# # Start the MySQL server when the container is run
+# CMD ["mysqld"]
 
 
 FROM eclipse-temurin:21-jdk-jammy
