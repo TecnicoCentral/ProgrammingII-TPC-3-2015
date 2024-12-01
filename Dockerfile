@@ -15,9 +15,9 @@ ENV MYSQL_PASSWORD=$123465789
 ENV MYSQL_DATABASE=University
 
 # Run the following commands to create the new user and grant them the necessary permissions
-RUN mysql -u root -p -e "CREATE USER '$MYSQL_USER'@'%' IDENTIFIED BY '$MYSQL_PASSWORD';"
-RUN mysql -u root -p -e "GRANT ALL PRIVILEGES ON $MYSQL_DATABASE.* TO '$MYSQL_USER'@'%';"
-RUN mysql -u root -p -e "FLUSH PRIVILEGES;"
+RUN mysql -h 0.0.0.0 -P 3306 -u root -p -e "CREATE USER '$MYSQL_USER'@'%' IDENTIFIED BY '$MYSQL_PASSWORD';"
+RUN mysql -h 0.0.0.0 -P 3306 -u root -p -e "GRANT ALL PRIVILEGES ON $MYSQL_DATABASE.* TO '$MYSQL_USER'@'%';"
+RUN mysql -h 0.0.0.0 -P 3306 -u root -p -e "FLUSH PRIVILEGES;"
 
 # Expose port 3306 to allow connections to the database
 EXPOSE 3306
