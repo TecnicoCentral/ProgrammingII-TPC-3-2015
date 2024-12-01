@@ -1,11 +1,7 @@
-FROM mysql:latest
-
-LABEL org.opencontainers.image.authors="saguileran@unal.edu.co"
-
-EXPOSE 3306
-
 
 FROM openjdk:21-jdk-slim
+
+LABEL org.opencontainers.image.authors="saguileran@unal.edu.co"
 
 RUN apt update 
 RUN apt install -y python3-pip unzip curl
