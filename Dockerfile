@@ -12,6 +12,8 @@ ENV MYSQL_DATABASE=University
 # RUN mysql -u root -p -h 127.0.0.1 -e "GRANT ALL PRIVILEGES ON $MYSQL_DATABASE.* TO '$MYSQL_USER'@'%';" 
 # RUN mysql -u root -p -h 127.0.0.1 -e "FLUSH PRIVILEGES;"
 
+#VOLUME ["/etc/mysql", "/var/lib/mysql"]
+
 RUN /bin/bash -c "/usr/bin/mysqld_safe --skip-grant-tables &" && \
     sleep 5 && \
     mysql -u root -e "CREATE DATABASE Universidad;" && \
