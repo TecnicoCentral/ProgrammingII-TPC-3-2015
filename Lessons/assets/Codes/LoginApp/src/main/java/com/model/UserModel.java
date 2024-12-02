@@ -10,7 +10,7 @@ import java.sql.Statement;
 public class UserModel {
     private static final String URL_DB = "jdbc:mysql://localhost:3306/LoginApp";
     private static final String USER = "root";
-    private static final String PASSWORD = "123456";
+    private static final String PASSWORD = "$123456789";
     private Connection connection;
 
     public UserModel() {
