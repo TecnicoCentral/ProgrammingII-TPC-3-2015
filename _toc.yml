@@ -62,9 +62,9 @@ parts:
         - file: Lessons/Exams/Second/V1.md
         - file: Lessons/Exams/Second/V2.md
     - file: Lessons/Exams/Third/Third.md
-      # sections:
-      #   - file: Lessons/Exams/Third/V1.md
-      #   - file: Lessons/Exams/Third/V2.md
+      sections:
+        - file: Lessons/Exams/Third/V1.md
+        - file: Lessons/Exams/Third/V2.md
   - caption: "Proyecto"
     chapters:
       - file: Lessons/ProjectGuideLines.md
